@@ -19,13 +19,13 @@ In Intl.DisplayNames API, we already cover language, region, script, and currenc
 
 ## Entrance Criteria For Stage 1
 
-* Identified “champion” who will advance the addition: DONE- @FrankYFTang
+* Identified “champion” who will advance the addition: **DONE- @FrankYFTang**
 * Prose outlining the problem or need and the general shape of a solution
 * Illustrative examples of usage
 * High-level API
 * Discussion of key algorithms, abstractions and semantics
 * Identification of potential “cross-cutting” concerns and implementation challenges/complexity
-* A publicly available repository for the proposal that captures the above requirements: DONE https://github.com/FrankYFTang/intl-displaynames-v2
+* A publicly available repository for the proposal that captures the above requirements: **DONE https://github.com/FrankYFTang/intl-displaynames-v2**
 
 # TO BE DELETED- FROM TEMPLATE
 
