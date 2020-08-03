@@ -19,7 +19,7 @@ In Intl.DisplayNames API, we already cover language, region, script, and currenc
 
 ## Entrance Criteria For Stage 1
 
-* Identified “champion” who will advance the addition: DONE- Frank Tang
+* Identified “champion” who will advance the addition: DONE- @FrankYFTang
 * Prose outlining the problem or need and the general shape of a solution
 * Illustrative examples of usage
 * High-level API
