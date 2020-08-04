@@ -29,7 +29,7 @@ In Intl.DisplayNames API, we already cover language, region, script, and currenc
 
 ## Experimentals
 * [V8 Prototype](https://chromium-review.googlesource.com/c/v8/v8/+/2335890)
-* Partial implementation of weekdays , month, unit, timeZone, calendar, numberingSystem.
+  * Partial implementation of weekdays , month, unit, timeZone, calendar, numberingSystem.
 
 # TO BE DELETED- FROM TEMPLATE
 
