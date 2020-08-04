@@ -27,6 +27,10 @@ In Intl.DisplayNames API, we already cover language, region, script, and currenc
 * Identification of potential “cross-cutting” concerns and implementation challenges/complexity
 * A publicly available repository for the proposal that captures the above requirements: **DONE https://github.com/FrankYFTang/intl-displaynames-v2**
 
+## Experimentals
+* [V8 Prototype](https://chromium-review.googlesource.com/c/v8/v8/+/2335890)
+* Partial implementation of weekdays , month, unit, timeZone, calendar, numberingSystem.
+
 # TO BE DELETED- FROM TEMPLATE
 
 ## Before creating a proposal
