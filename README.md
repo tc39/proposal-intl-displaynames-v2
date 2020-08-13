@@ -25,6 +25,118 @@ In Intl.DisplayNames API, we already cover language, region, script, and currenc
 * Enhance Features:
   * [Supporing Dialect](https://github.com/tc39/proposal-intl-displaynames/issues/20)
 
+## Motivation and Use Cases
+### TimeZone Name
+Since we already have Intl.DateTimeFormat object in ECMA402, it is "possible" for the developer to get the localized display name of the desired time zone by calling the Intl.DateTimeFormat API. However, it is tricky and error prone.
+First of all, the Intl.DateTimeFormat API does not allow us to output only timeZoneName. For example, the following code will use the current time for the output since we do not pass in a Date object:
+```
+(new Intl.DateTimeFormat("en", {timeZoneName: "long"})).format()
+"8/13/2020, Pacific Daylight Time"
+```
+Notice the same code would output the time zone name differently if it is running in the winter 
+```
+(new Intl.DateTimeFormat("en", {timeZoneName: "long"})).format(new Date("2020-01-01"))
+"12/31/2019, Pacific Standard Time"
+```
+This implies, if the caller needs to get the localized name for "Pacific Standard Time", it needs to construct a Date object of a known date which is known not in daylight saving time.  
+However, this requires the caller to know which particular date is in the range of standard time of a particular time zone. For example, for regions observing daylight saving time in the southern hemisphere, a date during January could fall under the range of daylight saving time while a date during July would fall under standard time. For example:
+
+```
+let dtfLA = new Intl.DateTimeFormat("en", {timeZone: "America/Los_Angeles", timeZoneName: "long"})
+let dtfSydney = new Intl.DateTimeFormat("en", {timeZone: "Australia/Sydney", timeZoneName: "long"})
+let dayInJan = new Date("2019-01-01");
+dtfLA.format(dayInJan)
+"12/31/2018, Pacific Standard Time"
+dtfSydney.format(dayInJan)
+"1/1/2019, Australian Eastern Daylight Time"
+let dayInJuly = new Date("2019-07-01");
+dtfLA.format(dayInJuly)
+"6/30/2019, Pacific Daylight Time"
+dtfSydney.format(dayInJuly)
+"7/1/2019, Australian Eastern Standard Time"
+```
+As we can see from the code snippet above, we cannot use a fixed single Date object to pass in the format method if we desire to get the name or the standard time or the name for the daylight saving time. It requires us to find a date value for a particular timezone.
+
+This above code example also shows us a second problem- there are no options in  Intl.DateFormat that allow the caller to control to only output the timezone name without other fields. The caller could, of course, call formatToParts instead and then take out the value which type is “timeZoneName”, for example:
+```
+dtfLA.formatToParts(dayInJan).filter(p => p.type == "timeZoneName").map(p => p.value).join()
+"Pacific Standard Time"
+dtfSydney.formatToParts(dayInJan).filter(p => p.type == "timeZoneName").map(p => p.value).join()
+"Australian Eastern Daylight Time"
+dtfLA.formatToParts(dayInJuly).filter(p => p.type == "timeZoneName").map(p => p.value).join()
+"Pacific Daylight Time"
+dtfSydney.formatToParts(dayInJuly).filter(p => p.type == "timeZoneName").map(p => p.value).join()
+"Australian Eastern Standard Time"
+```
+If we want to put everything together, then we get
+
+```
+(new Intl.DateTimeFormat("en", {timeZone: "America/Los_Angeles",timeZoneName: "long"}))
+   .formatToParts(new Date("2019-01-01")).filter(p => p.type == "timeZoneName")
+   .map(p => p.value).join()
+"Pacific Standard Time"  
+(new Intl.DateTimeFormat("en", {timeZone: "Australia/Sydney",timeZoneName: "long"}))
+   .formatToParts(new Date("2019-01-01")).filter(p => p.type == "timeZoneName")
+   .map(p => p.value).join()
+"Australian Eastern Daylight Time"
+(new Intl.DateTimeFormat("en", {timeZone: "America/Los_Angeles",timeZoneName: "long"}))
+   .formatToParts(new Date("2019-07-01")).filter(p => p.type == "timeZoneName")
+   .map(p => p.value).join()
+"Pacific Daylight Time"
+(new Intl.DateTimeFormat("en", {timeZone: "Australia/Sydney",timeZoneName: "long"}))
+   .formatToParts(new Date("2019-07-01")).filter(p => p.type == "timeZoneName")
+   .map(p => p.value).join()
+"Australian Eastern Standard Time"
+```
+In the other hand, we believe to get the timezone name, we should free developer from 
+knowing detail date range of daylight observation of each timezone by using 
+Intl.DisplayNames API, as:
+```
+let zoneNames = new Intl.DisplayNames("en", 
+    {type: "timeZoneName", style: "long"})
+zoneNames.of("America/Los_Angeles")
+"Pacific Standard Time"
+zoneNames.of("Australia/Sydney")
+"Australian Eastern Standard Time"
+```
+or
+```
+let zoneNames = new Intl.DisplayNames("en", 
+    {type: "timeZoneName", style: "long", daylightSaving: "false"})
+zoneNames.of("America/Los_Angeles")
+"Pacific Standard Time"
+zoneNames.of("Australia/Sydney")
+"Australian Eastern Standard Time"
+```
+If the caller want to get names of the daylight saving time:
+```
+let zoneNames = new Intl.DisplayNames("en", 
+    {type: "timeZoneName", style: "long", daylightSaving: "true"})
+zoneNames.of("America/Los_Angeles")
+"Pacific Daylight Time"
+zoneNames.of("Australia/Sydney")
+"Australian Eastern Daylight Time"
+```
+If the caller want to get names based on the current status (under July 2020) of each time zone:
+```
+let zoneNames = new Intl.DisplayNames("en", 
+    {type: "timeZoneName", style: "long", daylightSaving: "current"})
+zoneNames.of("America/Los_Angeles")
+"Pacific Daylight Time"
+zoneNames.of("Australia/Sydney")
+"Australian Eastern Standard Time"
+```
+To get the standard time zone names in Traditional Chinese used in Taiwan:
+```
+let zoneNames = new Intl.DisplayNames("zh-Hant-TW", 
+    {type: "timeZoneName", style: "long"})
+zoneNames.of("America/Los_Angeles")
+"太平洋標準時間"
+zoneNames.of("Australia/Sydney")
+"澳洲東部標準時間"
+```
+
+
 ## Entrance Criteria For Stage 1
 
 * Identified “champion” who will advance the addition: **DONE- @FrankYFTang**
