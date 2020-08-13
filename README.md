@@ -13,12 +13,17 @@ In Intl.DisplayNames API, we already cover language, region, script, and currenc
 
 ## Possible Enhancements
 
-* [Weekday and Month Names](https://github.com/tc39/proposal-intl-displaynames/issues/75)
-* [Unit Names](https://github.com/tc39/proposal-intl-displaynames/issues/34)
-* [TimeZone Names](https://github.com/tc39/proposal-intl-displaynames/issues/17)
-* [Calendar Names](https://github.com/tc39/proposal-intl-displaynames/issues/69)
-* [Numbering System Names](https://github.com/tc39/proposal-intl-displaynames/issues/68)
-* [Supporing Dialect](https://github.com/tc39/proposal-intl-displaynames/issues/20)
+* Extending Types:
+  * [Weekday and Month Names](https://github.com/tc39/proposal-intl-displaynames/issues/75)
+  * [Unit Names](https://github.com/tc39/proposal-intl-displaynames/issues/34)
+  * [TimeZone Names](https://github.com/tc39/proposal-intl-displaynames/issues/17)
+  * [Calendar Names](https://github.com/tc39/proposal-intl-displaynames/issues/69)
+  * [Numbering System Names](https://github.com/tc39/proposal-intl-displaynames/issues/68)
+  * Quarter
+  * Day Period
+  * Date Time Field
+* Enhance Features:
+  * [Supporing Dialect](https://github.com/tc39/proposal-intl-displaynames/issues/20)
 
 ## Entrance Criteria For Stage 1
 
