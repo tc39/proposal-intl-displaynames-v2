@@ -44,12 +44,14 @@ dtf.format(new Date("2020-10-01")),
 dtf.format(new Date("2020-11-01")),
 dtf.format(new Date("2020-12-01"))]
 ```
-By glancing at the code, it seems monthNames will be an array of the names from January to December, on a based 0 index. However, that is not the case if the client code is running on a timezone with a positive GMT offset:
+By glancing at the code, it seems monthNames will be an array of the names from January to December, on a based 0 index. However, that is not the case if the client code is running on a timezone with a negative GMT offset, such as if is running under PST (which is UTC−08:00):
 ```
 monthNames
 ["December", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November"]
 ```
-This is because the code constructs the Date objects using date in string, and the Intl.DateTimeFormat, constructed without a timeZoneName value in option,  is using the local timezone. So for Intl.DateTimeFormat running on a positive GMT offset timezone, a Date object created with  "2020-01-01" is set to the time of 2020-01-01 00:00:00.000 in UTC, and therefore a time in their local 2019-12-31. So it generates such results that we do not expect. But the same code will generate the correct result if it is running in UTC or any negative GMT offset timezone. There are two hacks to fix that, one is not to use the first day of the month to create the date, instead, use other date, such as:
+This is because the code constructs the Date objects using date in string, and the Intl.DateTimeFormat, constructed without a timeZoneName value in option, is using the local timezone to output the month. So for Intl.DateTimeFormat, if it is running on a negative GMT offset timezone, a Date object created with "2020-01-01", which internally set to the time of 2020-01-01 00:00:00.000 in UTC, would be converted to sometime during 2019-12-31 in the local time zone, and therefore causes the Intl.DateTimeFormat to output December instead of Januray. It generates such results that out of a naive expectation. However, the same code would generate the correct result if it is running in UTC or any positive GMT offset timezones. Therefore, the correctness of this code is not deterministic by itself, depending on which local time zone it run under. There are at least two possible hacks could fix this issue:
+
+The first is to use the date other than the first day of the month to create the date, such as:
 ```
 let monthNames = [
 dtf.format(new Date("2020-01-02")),
@@ -67,7 +69,7 @@ dtf.format(new Date("2020-12-02"))]
 monthNames
 ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 ```
-But this look very stange and it would be very complicate to comment the code for such reason. 
+But this look very stange and it would be very complicate to explain the reason in the comments. 
 
 Another way to address this is to set the timeZone to "UTC" when construct the Intl.DateTimeFormat object, such as:
 ```
@@ -88,8 +90,9 @@ dtf.format(new Date("2020-12-01"))]
 monthNames
 ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 ```
+But it is not clear by looking at this code how significant it is to set the timeZone: "UTC" to ensure it return correct result.
 
-We believe we should provide month name in Intl.DisplayNames to make it more straightforward, as 
+We believe this issue should be cleanly addressed by adding a type: "month" to Intl.DisplayNames, then the developer could just code it straightforward as 
 ```
 let dn = new Intl.DisplayNames("en", {type: "month", style: "long"})
 let monthNames = [ dn.of(1), dn.of(2), dn.of(3), dn.of(4), dn.of(5), 
@@ -97,7 +100,7 @@ dn.of(6), dn.of(7), dn.of(8), dn.of(9), dn.of(10), dn.of(11), dn.of(12)]
 monthNames
 ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 ```
-and to get the month names as in Traditional Chinese used in Taiwan:
+Similarly, to get the month names in Traditional Chinese used in Taiwan would be:
 ```
 let dn = new Intl.DisplayNames("zh-Hant-TW", {type: "month", style: "long"})
 let monthNames = [ dn.of(1), dn.of(2), dn.of(3), dn.of(4), dn.of(5), 
@@ -105,7 +108,7 @@ dn.of(6), dn.of(7), dn.of(8), dn.of(9), dn.of(10), dn.of(11), dn.of(12)]
 monthNames
  ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"]
 ```
-The using a Date object with Intl.DateTimeFormat hack is even worse when we want to get the display names for a different calendar system. For example, if we like to get the array of month names in English for the “coptic” calendar, the following code would get us incorrect result:
+The using a Date object with Intl.DateTimeFormat hack is even worse when we want to get the display names for a different calendar system. For example, if we like to get the month names in English for the “coptic” calendar, the following code would get us incorrect result:
 ```
 let dtf = new Intl.DateTimeFormat("en", {month: "long", timeZone: "UTC", calendar: "coptic"})
 let monthNames = [
@@ -124,7 +127,7 @@ dtf.format(new Date("2020-12-01"))]
 monthNames
 ["Kiahk", "Toba", "Amshir", "Baramhat", "Baramouda", "Bashans", "Paona", "Epep", "Mesra", "Tout", "Baba", "Hator"]
 ```
-But "Kiahk" is the English name of the fourth month in the [“coptic” calendar system](https://en.wikipedia.org/wiki/Coptic_calendar) and the name of the first month should be “Tout". The problem is the Date object we construct is under gregorian calendar and the Intl.DateTimeFormat will convert that date to the coptic calendar inside the format function, and the conversion result the date “2020-01-01” in a date in the fourth month under the “coptic” calendar system and therefore the Intl.DateTimeFormat output the month name as the fourth month. In order to get the list of the month name in the right order, the developer need to know 12 dates, each correctly reverse convert from the desired month in the “coptic” calendar system back to the Gregorian date and put that into the code. 
+Notice  "Kiahk" is the English name of the fourth month in the [“coptic” calendar system](https://en.wikipedia.org/wiki/Coptic_calendar) and the name of the first month in this calendar should be “Tout". The problem is the Date object we constructed is under Gregorian calendar and the Intl.DateTimeFormat will convert that Date to the coptic calendar internally in the format function. The conversion would convert the date “2020-01-01” to a date in the fourth month under the “coptic” calendar system. Therefore the Intl.DateTimeFormat output the month name as the fourth month. In order to get the list of the month name in the right order, we have to know 12 specific dates, each correctly reverse convert from a date in the desired month in the “coptic” calendar system back to the Gregorian date. The put the Gregorian Date into the code, such as:
 ```
 let dtf = new Intl.DateTimeFormat("en", {month: "long", timeZone: "UTC", calendar: "coptic"})
 let monthNames = [
@@ -143,7 +146,7 @@ dtf.format(new Date("2020-08-07"))]
 monthNames
 ["Tout", "Baba", "Hator", "Kiahk", "Toba", "Amshir", "Baramhat", "Baramouda", "Bashans", "Paona", "Epep", "Mesra"]
 ```
-As you can see, this makes the code using such hack pretty complicated and hard to understand. By using Intl.DisplayNames, the code would looks straightforward as:
+As you can see, using this apporach to get month name for other calendar is extermely nasty. By our proposal of using type: "month" in  Intl.DisplayNames, with a calendar: "coptic" option, the code would looks straightforward as:
 ```
 let dn = new Intl.DisplayNames("en", {type: "month", style: "long", calendar: "coptic"})
 let monthNames = [ dn.of(1), dn.of(2), dn.of(3), dn.of(4), dn.of(5), 
@@ -151,7 +154,7 @@ dn.of(6), dn.of(7), dn.of(8), dn.of(9), dn.of(10), dn.of(11), dn.of(12)]
 monthNames
 ["Tout", "Baba", "Hator", "Kiahk", "Toba", "Amshir", "Baramhat", "Baramouda", "Bashans", "Paona", "Epep", "Mesra"]
 ```
-and to get the month names of the [“coptic” calendar system](https://en.wikipedia.org/wiki/Coptic_calendar)  in Traditional Chinese used in Taiwan:
+To get the month names in Traditional Chinese used in Taiwan:
 ```
 let dn = new Intl.DisplayNames("zh-Hant-TW", {type: "month", style: "long", calendar: "coptic"})
 let monthNames = [ dn.of(1), dn.of(2), dn.of(3), dn.of(4), dn.of(5), 
@@ -159,6 +162,50 @@ dn.of(6), dn.of(7), dn.of(8), dn.of(9), dn.of(10), dn.of(11), dn.of(12)]
 monthNames
 ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"]
 ```
+### Weekday Names
+Since we already have Intl.DateTimeFormat object in ECMA402, it is also "possible" for the developer to get the localized display name of the desired weekday by calling the Intl.DateTimeFormat API. However, this also require the developer to code a particular date into the code. For example, the developer may try to use "2020-01-01" as the date:
+```
+let d = new Date("2020-01-01")
+let df = new Intl.DateTimeFormat("en", {weekday: "long"})
+df.format(d)
+"Tuesday"
+```
+Now the developer believe "2020-01-01" is Tuesday, so the developer may code
+```
+let d = new Date("2020-01-07")
+let df = new Intl.DateTimeFormat("en", {weekday: "long"})
+df.format(d)
+"Monday"
+```
+and then change the code to
+```
+function getWeekdayNames() {
+  let d = new Date("2020-01-07");
+  let df = new Intl.DateTimeFormat("en", {weekday: "long"});
+  let result = [];
+  for (let i = 0; i < 7; i++) {
+    result.push(df.format(d));
+    d = new Date(d.valueOf() + 24*60*60*1000);
+  }
+  return result;
+}
+let weekday = getWeekdayNames();
+weekday
+["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+```
+Now the engineer may think the code did it’s job. But for the same reason as the month, this is incorrect. Because "2020-01-07" is actually a Tuesday, not a Monday. The reason the code get “Monday” for the Date object "2020-01-07" is only because the code is running under a local time zone which has  negative GMT offset and Into.DateTimeFormat is converting the UTC 2020-01-07:00:00:00 into a time in 2020-01-06 of the local time, which that day is Monday. So if this code is shipped and run in a client that is running under UTC or any positive GMT offset time zones, the code will return instead:
+```
+weekday
+["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Monday"] 
+```
+We believe such task should be supported by using type: “weekday” in Intl.DisplayNames, straightforward as:
+```
+let dn = new Intl.DisplayNames("en", {type: "weekday", style: "long"});
+let weekday = [df.of(1), df.of(2), df.of(3), df.of(4), df.of(5), df.of(6), df.of(7)];
+weekday
+["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+```
+regardless which local timezone the client is running under. 
 
 ### TimeZone Names
 Since we already have Intl.DateTimeFormat object in ECMA402, it is "possible" for the developer to get the localized display name of the desired time zone by calling the Intl.DateTimeFormat API. However, it is tricky and error prone.
