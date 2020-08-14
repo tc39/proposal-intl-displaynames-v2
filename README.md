@@ -193,7 +193,7 @@ let weekday = getWeekdayNames();
 weekday
 ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 ```
-Now the engineer may think the code did it’s job. But for the same reason as the month, this is incorrect. Because "2020-01-07" is actually a Tuesday, not a Monday. The reason the code get “Monday” for the Date object "2020-01-07" is only because the code is running under a local time zone which has  negative GMT offset and Into.DateTimeFormat is converting the UTC 2020-01-07:00:00:00 into a time in 2020-01-06 of the local time, which that day is Monday. So if this code is shipped and run in a client that is running under UTC or any positive GMT offset time zones, the code will return instead:
+Now the engineer may think the code did it’s job. But for the same reason as the month, this is incorrect. Because "2020-01-07" is actually a Tuesday, not a Monday. The reason the code get “Monday” for the Date object "2020-01-07" is only because the code is running under a local time zone which has  negative GMT offset and Intl.DateTimeFormat is converting the UTC 2020-01-07:00:00:00 into a time in 2020-01-06 of the local time, which that day is Monday. So if this code is shipped and run in a client that is running under UTC or any positive GMT offset time zones, the code will return instead:
 ```
 weekday
 ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Monday"] 
