@@ -1,9 +1,9 @@
 # Proposal: Intl.DisplayNames V2
 
 ## Stage 
-Stage 0
+Stage 1
 
-Plan to propose to [Stage 1 advancement](https://docs.google.com/presentation/d/11Ch4Y9yYzMJjznX478Y0QbbCGiOAXbOzLjpYnMH9eck/edit#slide=id.g98718c7875_0_0) in TC39 2020-09 meeting.
+Advanced to [Stage 1](https://docs.google.com/presentation/d/11Ch4Y9yYzMJjznX478Y0QbbCGiOAXbOzLjpYnMH9eck/edit#slide=id.g98718c7875_0_0) in TC39 2020-09 meeting.
 
 ## Champion
 * Frank Tang @FrankYFTang
