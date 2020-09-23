@@ -167,6 +167,9 @@ dn.of(6), dn.of(7), dn.of(8), dn.of(9), dn.of(10), dn.of(11), dn.of(12)]
 monthNames
 ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"]
 ```
+
+About the requirement to addressing Leap Month, please see the summary in ["Month in Calendars supported by ICU
+"](https://docs.google.com/presentation/d/1H8raDYhWHICKsrCJcy5J7kWdpyfeF-Em0WdJ2YVa_Hg/edit).
 ### Weekday Names
 Since we already have Intl.DateTimeFormat object in ECMA402, it is also "possible" for the developer to get the localized display name of the desired weekday by calling the Intl.DateTimeFormat API. However, this also require the developer to code a particular date into the code. For example, the developer may try to use "2020-01-01" as the date:
 ```
