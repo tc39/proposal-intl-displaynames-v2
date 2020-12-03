@@ -55,7 +55,6 @@
       <ins>The IsValidWeekdayCode abstract operation is called with arguments _weekday_. It verifies that the _weekday_ argument represents a valid weekday code. The following steps are taken:</ins>
       </p>
       <emu-alg>
-        1. <ins>Let _weekday_ be ? ToNumber(_weekday_).</ins>
         1. <ins>If _weekday_ is listed in <emu-xref href="#table-validcodeforweekday"></emu-xref>, return *true*.</ins>
         1. <ins>Return *false*.</ins>
       </emu-alg>
@@ -70,31 +69,31 @@
             </tr>
           </thead>
           <tr>
-            <td><ins>`1`</ins></td>
+            <td><ins>`"1"`</ins></td>
             <td><ins>Monday, e.g. M, Mon, Monday, etc.</ins></td>
           </tr>
           <tr>
-            <td><ins>`2`</ins></td>
+            <td><ins>`"2"`</ins></td>
             <td><ins>Tuesday, e.g. Tu, Tue, Tuesday, etc.</ins></td>
           </tr>
           <tr>
-            <td><ins>`3`</ins></td>
+            <td><ins>`"3"`</ins></td>
             <td><ins>Wednesday, e.g. W, Wed, Wednesday, etc.</ins></td>
           </tr>
           <tr>
-            <td><ins>`4`</ins></td>
+            <td><ins>`"4"`</ins></td>
             <td><ins>Thursday, e.g. Th, Thur, Thursday, etc.</ins></td>
           </tr>
           <tr>
-            <td><ins>`5`</ins></td>
+            <td><ins>`"5"`</ins></td>
             <td><ins>Friday, e.g. F, Fri, Friday, etc.</ins></td>
           </tr>
           <tr>
-            <td><ins>`6`</ins></td>
+            <td><ins>`"6"`</ins></td>
             <td><ins>Saturday, e.g. Sa, Sat, Saturday, etc.</ins></td>
           </tr>
           <tr>
-            <td><ins>`7`</ins></td>
+            <td><ins>`"7"`</ins></td>
             <td><ins>Sunday, e.g. Su, Sun, Sunday, etc.</ins></td>
           </tr>
         </table>
@@ -332,8 +331,8 @@
         <li>The display name styles fields under display name type `"region"` should contain Records, with keys corresponding to region codes. The value of these fields must be string values.</li>
         <li>The display name styles fields under display name type `"script"` should contain Records, with keys corresponding to script codes. The value of these fields must be string values.</li>
         <li>The display name styles fields under display name type `"currency"` should contain Records, with keys corresponding to currency codes. The value of these fields must be string values.</li>
-        <li><ins>The display name styles fields under display name type `"weekday"` should contain Records, with keys corresponding to TODO(ftang TBW) codes. The value of these fields must be string values.</ins></li>
-        <li><ins>The display name styles fields under display name type `"month"` should contain Records, with keys corresponding to TODO(ftang TBW) codes. The value of these fields must be string values.</li>
+        <li><ins>The display name styles fields under display name type `"weekday"` should contain Records, with keys corresponding to a weekday code listed in <emu-xref href="#table-validcodeforweekday"></emu-xref>. The value of these fields must be string values.</ins></li>
+        <li><ins>The display name styles fields under display name type `"month"` should contain Records, with keys corresponding to a month code listed in <emu-xref href="#table-validcodeformonth"></emu-xref>. The value of these fields must be string values.</li>
         <li><ins>The display name styles fields under display name type `"calendar"` should contain Records, with keys corresponding to a String value with the "type" given in Unicode Technical Standard 35 for the calendar used for formatting. The value of these fields must be string values.</li>
         <li><ins>The display name styles fields under display name type `"numberingSytem"` should contain Records, with keys corresponding to a String value with the "type" given in Unicode Technical Standard 35 for the numbering system used for formatting. The value of these fields must be string values.</li>
         <li><ins>The display name styles fields under display name type `"unit"` should contain Records, with keys corresponding to a well-formed core unit identifier as defined in UTS #35, Part 2, Section 6.. The value of these fields must be string values.</li>
