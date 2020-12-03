@@ -25,10 +25,10 @@
           1. Let _code_ be the result of mapping the first character in _code_ to upper case, and mapping the second, third and fourth character in _code_ to lower case, as described in <emu-xref href="#sec-case-sensitivity-and-case-mapping"></emu-xref>.
           1. Return _code_.
         1. <ins>If _type_ is `"weekday"`, then,</ins>
-          1. <ins>(TODO ftang TBW)</ins>
+          1. <ins>If the result of IsValidWeekdayCode(_code_) is *false*, throw a *RangeError* exception.</ins>
           1. <ins>Return _code_.</ins>
         1. <ins>If _type_ is `"month"`, then,</ins>
-          1. <ins>(TODO ftang TBW)</ins>
+          1. <ins>If the result of IsValidMonthCode(_code_) is *false*, throw a *RangeError* exception.</ins>
           1. <ins>Return _code_.</ins>
         1. <ins>If _type_ is `"calendar"` or `"numberingSystem"`, then</ins>
           1. <ins>If _code_ does not match the Unicode Locale Identifier `type` nonterminal, throw a *RangeError* exception.</ins>
@@ -48,6 +48,179 @@
       </emu-alg>
     </emu-clause>
   </emu-clause>
+
+    <emu-clause id="sec-isvalidweekdaycode" aoid="IsValidWeekdayCode">
+      <h1><ins>IsValidWeekdayCode ( _weekday_ )</ins></h1>
+      <p>
+      <ins>The IsValidWeekdayCode abstract operation is called with arguments _weekday_. It verifies that the _weekday_ argument represents a valid weekday code. The following steps are taken:</ins>
+      </p>
+      <emu-alg>
+        1. <ins>Let _weekday_ be ? ToNumber(_weekday_).</ins>
+        1. <ins>If _weekday_ is listed in <emu-xref href="#table-validcodeforweekday"></emu-xref>, return *true*.</ins>
+        1. <ins>Return *false*.</ins>
+      </emu-alg>
+
+      <emu-table id="table-validcodeforweekday">
+        <emu-caption><ins>Codes For Date Time of DisplayNames</ins></emu-caption>
+        <table class="real-table">
+          <thead>
+            <tr>
+              <th><ins>Code</ins></th>
+              <th><ins>Description</ins></th>
+            </tr>
+          </thead>
+          <tr>
+            <td><ins>`1`</ins></td>
+            <td><ins>Monday, e.g. M, Mon, Monday, etc.</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`2`</ins></td>
+            <td><ins>Tuesday, e.g. Tu, Tue, Tuesday, etc.</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`3`</ins></td>
+            <td><ins>Wednesday, e.g. W, Wed, Wednesday, etc.</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`4`</ins></td>
+            <td><ins>Thursday, e.g. Th, Thur, Thursday, etc.</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`5`</ins></td>
+            <td><ins>Friday, e.g. F, Fri, Friday, etc.</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`6`</ins></td>
+            <td><ins>Saturday, e.g. Sa, Sat, Saturday, etc.</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`7`</ins></td>
+            <td><ins>Sunday, e.g. Su, Sun, Sunday, etc.</ins></td>
+          </tr>
+        </table>
+      </emu-table>
+
+    </emu-clause>
+
+    <emu-clause id="sec-isvalidmonthcode" aoid="IsValidMonthCode">
+      <h1><ins>IsValidMonthCode ( _month_ )</ins></h1>
+      <p>
+      <ins>The IsValidMonthCode abstract operation is called with arguments _month_. It verifies that the _month_ argument represents a valid month code. The following steps are taken:</ins>
+      </p>
+      <emu-alg>
+        1. <ins>If _month_ is listed in <emu-xref href="#table-validcodeformonth"></emu-xref>, return *true*.</ins>
+        1. <ins>Return *false*.</ins>
+      </emu-alg>
+
+      <emu-table id="table-validcodeformonth">
+        <emu-caption><ins>Codes For Month of DisplayNames</ins></emu-caption>
+        <table class="real-table">
+          <thead>
+            <tr>
+              <th><ins>Code</ins></th>
+              <th><ins>Description</ins></th>
+            </tr>
+          </thead>
+          <tr>
+            <td><ins>`"1"`</ins></td>
+            <td><ins>The first regular, non-leap month of the year, e.g. Jan, January.</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`"1L"`</ins></td>
+            <td><ins>The leap month that follows the first regular month in the year</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`"2"`</ins></td>
+            <td><ins>The second regular, non-leap month of the year, e.g. Feb, February.</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`"2L"`</ins></td>
+            <td><ins>The leap month that follows the second regular month in the year</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`"3"`</ins></td>
+            <td><ins>The third regular, non-leap month of the year, e.g. Mar, March.</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`"3L"`</ins></td>
+            <td><ins>The leap month that follows the third regular month in the year</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`"4"`</ins></td>
+            <td><ins>The fourth regular, non-leap month of the year, e.g. Apr, April.</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`"4L"`</ins></td>
+            <td><ins>The leap month that follows the 4th regular month in the year</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`"5"`</ins></td>
+            <td><ins>The fifth regular, non-leap month of the year, e.g. May.</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`"5L"`</ins></td>
+            <td><ins>The leap month that follows the 5th regular month in the year</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`"6"`</ins></td>
+            <td><ins>The sixth regular, non-leap month of the year, e.g. Jun, June.</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`"6L"`</ins></td>
+            <td><ins>The leap month that follows the 6th regular month in the year</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`"7"`</ins></td>
+            <td><ins>The seventh regular, non-leap month of the year, e.g. Jul, July.</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`"7L"`</ins></td>
+            <td><ins>The leap month that follows the 7th regular month in the year</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`"8"`</ins></td>
+            <td><ins>The eigth regular, non-leap month of the year, e.g. Aug, August.</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`"8L"`</ins></td>
+            <td><ins>The leap month that follows the 8th regular month in the year</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`"9"`</ins></td>
+            <td><ins>The ninth regular, non-leap month of the year, e.g. Sep, September.</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`"9L"`</ins></td>
+            <td><ins>The leap month that follows the 9th regular month in the year</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`"10"`</ins></td>
+            <td><ins>The tenth regular, non-leap month of the year, e.g. Oct, October.</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`"10L"`</ins></td>
+            <td><ins>The leap month that follows the 10th regular month in the year</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`"11"`</ins></td>
+            <td><ins>The eleventh regular, non-leap month of the year, e.g. Nov, November.</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`"11L"`</ins></td>
+            <td><ins>The leap month that follows the 11th regular month in the year</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`"12"`</ins></td>
+            <td><ins>The twelfth regular, non-leap month of the year, e.g. Dec, December.</ins></td>
+          </tr>
+          <tr>
+            <td><ins>`"12L"`</ins></td>
+            <td><ins>The leap month that follows the 12th regular month in the year</ins></td>
+          </tr>
+        </table>
+      </emu-table>
+
+    </emu-clause>
 
   <emu-clause id="sec-intl-displaynames-constructor">
     <h1>The Intl.DisplayNames Constructor</h1>
@@ -71,6 +244,10 @@
         1. Let _localeData_ be %DisplayNames%.[[LocaleData]].
         1. Let _matcher_ be ? GetOption(_options_, `"localeMatcher"`, `"string"`, &laquo; `"lookup"`, `"best fit"` &raquo;, `"best fit"`).
         1. Set _opt_.[[localeMatcher]] to _matcher_.
+        1. <ins>Let _calendar_ be ? GetOption(_options_, `"calendar"`, `"string"`, *undefined*, *undefined*).</ins>
+        1. <ins>If _calendar_ is not *undefined*, then</ins>
+          1. <ins>If _calendar_ does not match the `(3*8alphanum) *("-" (3*8alphanum))` sequence, throw a *RangeError* exception.</ins>
+        1. <ins>Set _opt_.[[ca]] to _calendar_.</ins>
         1. Let _r_ be ResolveLocale(%DisplayNames%.[[AvailableLocales]], _requestedLocales_, _opt_, %DisplayNames%.[[RelevantExtensionKeys]]).
         1. Let _style_ be ? GetOption(_options_, `"style"`, `"string"`, &laquo; `"narrow"`, `"short"`, `"long"` &raquo;, `"long"`).
         1. Set _displayNames_.[[Style]] to _style_.
@@ -80,13 +257,19 @@
         1. Let _fallback_ be ? GetOption(_options_, `"fallback"`, `"string"`, &laquo; `"code"`, `"none"` &raquo;, `"code"`).
         1. Set _displayNames_.[[Fallback]] to _fallback_.
         1. Set _displayNames_.[[Locale]] to the value of _r_.[[Locale]].
+        1. <ins>Let _calendar_ be _r_.[[ca]].</ins>
+        1. <ins>Set _displayNames_.[[Calendar]] to _calendar_.</ins>
         1. Let _dataLocale_ be _r_.[[dataLocale]].
         1. Let _dataLocaleData_ be _localeData_.[[&lt;_dataLocale_&gt;]].
         1. Let _types_ be _dataLocaleData_.[[types]].
         1. Assert: _types_ is a Record (see <emu-xref href="#sec-Intl.DisplayNames-internal-slots"></emu-xref>).
         1. Let _typeFields_ be _types_.[[&lt;_type_&gt;]].
         1. Assert: _typeFields_ is a Record (see <emu-xref href="#sec-Intl.DisplayNames-internal-slots"></emu-xref>).
-        1. Let _styleFields_ be _typeFields_.[[&lt;_style_&gt;]].
+        1. <del>Let _styleFields_ be _typeFields_.[[&lt;_style_&gt;]].</del>
+        1. <ins>If _type_ is `"weekday"`, `"month"`, `"quarter"`, or `"dayPeriod"`, then</ins>
+          1. <ins>Let _styleFields_ be _typeFields_.[[&lt;_calendar_&gt;]].[[&lt;_style_&gt;]].</ins>
+        1. <ins>Else,</ins>
+          1. <ins>Let _styleFields_ be _typeFields_.[[&lt;_style_&gt;]].</ins>
         1. Assert: _styleFields_ is a Record (see <emu-xref href="#sec-Intl.DisplayNames-internal-slots"></emu-xref>).
         1. Set _displayNames_.[[Fields]] to _styleFields_.
         1. Return _displayNames_.
@@ -143,7 +326,8 @@
 
       <ul>
         <li>[[LocaleData]].[[&lt;_locale_&gt;]] must have a [[types]] field for all locale values _locale_. The value of this field must be a Record, which must have fields with the names of one of the valid display name types: `"language"`, `"region"`, `"script"`, <del>and</del> `"currency"`<ins>, `"weekday"`, `"month"`,  `"calendar"`, `"numberingSystem"`, `"unit"`, and `"timeZone"`</ins>.</li>
-        <li>The value of fields `"language"`, `"region"`, `"script"`, and `"currency"` must be a Records which must have fields with the names of one of the valid display name styles: `"narrow"`, `"short"`, and `"long"`.</li>
+        <li>The value of fields `"language"`, `"region"`, `"script"`, <del>and </del>`"currency"`<ins>, `"calendar"`, `"numberingSystem"`, `"unit"`, and `"timeZone"`</ins> must be a Records which must have fields with the names of one of the valid display name styles: `"narrow"`, `"short"`, and `"long"`.</li>
+        <li><ins>The value of fields `"weekday"` and `"month"` must have a [[&lt;_calendar_&gt;]] field for all calendar values _calendar_. The value of each of those fields in turn must be a Records which must have fields with the names of one of the valid display name styles: `"narrow"`, `"short"`, and `"long"`.</li>
         <li>The display name styles fields under display name type `"language"` should contain Records, with keys corresponding to language codes according to `unicode_language_id` production. The value of these fields must be string values.</li>
         <li>The display name styles fields under display name type `"region"` should contain Records, with keys corresponding to region codes. The value of these fields must be string values.</li>
         <li>The display name styles fields under display name type `"script"` should contain Records, with keys corresponding to script codes. The value of these fields must be string values.</li>
@@ -276,6 +460,7 @@
 
     <ul>
       <li>[[Locale]] is a String value with the language tag of the locale whose localization is used for formatting.</li>
+      <li><ins>[[Calendar]] is a String value with the `"type"` given in Unicode Technical Standard 35 for the calendar used for formatting.</ins></li>
       <li>[[Style]] is one of the String values `"narrow"`, `"short"`, or `"long"`, identifying the display names style used.</li>
       <li>[[Type]] is one of the String values `"language"`, `"region"`, `"script"`, <del>or </del>`"currency"`,<ins> `"weekday"`, `"month"`, `"calendar"`, `"numberingSystem"`, `"unit"`, or `"timeZone"` ,</ins> identifying the type of the display names requested.</li>
       <li>[[Fallback]] is one of the String values `"code"`, or `"none"`, identifying the fallback return when the system does not have the requested display name.</li>
