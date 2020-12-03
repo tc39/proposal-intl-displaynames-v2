@@ -4,20 +4,19 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
 <script src="./spec.js"></script>
 <pre class="metadata">
-title: Proposal Title Goes Here
-stage: -1
-contributors: Your Name(s) Here
+title: Intl.DisplayNames v2 Proposal
+stage: 1
+location: https://tc39.github.io/proposal-intl-displaynames-v2/
+copyright: true
+contributors: Google, Ecma International
 </pre>
 
-<emu-clause id="sec-demo-clause">
-  <h1>This is an emu-clause</h1>
-  <p>This is an algorithm:</p>
-  <emu-alg>
-    1. Let _proposal_ be *undefined*.
-    1. If IsAccepted(_proposal_),
-      1. Let _stage_ be *0*.
-    1. Else,
-      1. Let _stage_ be *-1*.
-    1. Return ? ToString(_proposal_).
-  </emu-alg>
-</emu-clause>
+<emu-intro id="sec-intro">
+  <h1>Introduction</h1>
+
+  <p>This proposal enhances the Intl.DisplayNames API and cover more display names for weekday, month, time zone, unit, calendar, numbering system, etc.
+  See <a href="https://github.com/tc39/intl-displaynames-v2/blob/main/README.md">the README</a> for more context.</p>
+</emu-intro>
+
+<emu-biblio href="./biblio.json"></emu-biblio>
+<emu-import href="./displaynames.html"></emu-import>

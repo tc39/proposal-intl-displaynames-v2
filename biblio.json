@@ -1,0 +1,75 @@
+{
+  "https://tc39.es/ecma402/": [
+    {
+      "type": "op",
+      "aoid": "GetOption",
+      "id": "sec-getoption"
+    },
+    {
+      "type": "op",
+      "aoid": "ResolveLocale",
+      "id": "sec-resolvelocale"
+    },
+    {
+      "type": "op",
+      "aoid": "IsWellFormedCurrencyCode",
+      "id": "sec-iswellformedcurrencycode"
+    },
+    {
+      "type": "op",
+      "aoid": "CanonicalizeLocaleList",
+      "id": "sec-canonicalizelocalelist"
+    },
+    {
+      "type": "op",
+      "aoid": "CanonicalizeUnicodeLocaleId",
+      "id": "sec-canonicalizeunicodelocaleid"
+    },
+    {
+      "type": "op",
+      "aoid": "IsStructurallyValidLanguageTag",
+      "id": "sec-isstructurallyvalidlanguagetag"
+    },
+    {
+      "type": "op",
+      "aoid": "SupportedLocales",
+      "id": "sec-supportedlocales"
+    },
+    {
+      "type": "op",
+      "aoid": "IsWellFormedUnitIdentifier",
+      "id": "sec-iswellformedunitidentifier"
+    },
+    {
+      "type": "op",
+      "aoid": "IsValidTimeZoneName",
+      "id": "sec-isvalidtimezonename"
+    },
+    {
+      "type": "op",
+      "aoid": "CanonicalizeTimeZoneName",
+      "id": "sec-canonicalizetimezonenam"
+    },
+    {
+      "type": "clause",
+      "number": "6.1",
+      "id": "sec-case-sensitivity-and-case-mapping"
+    },
+    {
+      "type": "term",
+      "term": "legacy-constructor",
+      "refId": "sec-constructor-properties-of-the-intl-object",
+      "id": "legacy-constructor"
+    },
+    {
+      "type": "clause",
+      "number": "9.1",
+      "id": "sec-internal-slots"
+    },
+    {
+      "type": "clause",
+      "number": "6.1",
+      "id": "sec-case-sensitivity-and-case-mapping"
+    }
+  ]
+}
