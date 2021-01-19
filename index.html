@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="./spec.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
 <script src="./spec.js"></script>
-<title>Intl.DisplayNames v2 Proposal</title><script type="application/json" id="menu-search-biblio">[{"type":"clause","id":"sec-intro","aoid":null,"title":"Introduction","titleHTML":"Introduction","number":"","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Introduction"},{"type":"op","aoid":"CanonicalCodeForDisplayNames","refId":"sec-canonicalcodefordisplaynames","location":"","referencingIds":[],"key":"CanonicalCodeForDisplayNames"},{"type":"clause","id":"sec-canonicalcodefordisplaynames","aoid":"CanonicalCodeForDisplayNames","title":"CanonicalCodeForDisplayNames ( type, code, calendar)","titleHTML":"CanonicalCodeForDisplayNames ( <var>type</var>, <var>code</var><ins>, <var>calendar</var></ins>)","number":"1.1.1","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":["_ref_18"],"key":"CanonicalCodeForDisplayNames ( type, code, calendar)"},{"type":"clause","id":"sec-intl-displaynames-abstracts","aoid":null,"title":"Abstract Operations for DisplayNames Objects","titleHTML":"Abstract Operations for DisplayNames Objects","number":"1.1","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Abstract Operations for DisplayNames Objects"},{"type":"table","id":"table-validcodeforweekday","node":{},"number":1,"caption":"Table 1: <ins>Codes For Date Time of DisplayNames</ins>","referencingIds":["_ref_0","_ref_8"],"namespace":"https://tc39.es/intl-displaynames-v2/","location":"","key":"Table 1: <ins>Codes For Date Time of DisplayNames</ins>"},{"type":"op","aoid":"IsValidWeekdayCode","refId":"sec-isvalidweekdaycode","location":"","referencingIds":[],"key":"IsValidWeekdayCode"},{"type":"clause","id":"sec-isvalidweekdaycode","aoid":"IsValidWeekdayCode","title":"IsValidWeekdayCode ( weekday )","titleHTML":"<ins>IsValidWeekdayCode ( <var>weekday</var> )</ins>","number":"1.2","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":["_ref_12"],"key":"IsValidWeekdayCode ( weekday )"},{"type":"table","id":"table-validcodeformonth","node":{},"number":2,"caption":"Table 2: <ins>Codes For Month</ins>","referencingIds":["_ref_1","_ref_9"],"namespace":"https://tc39.es/intl-displaynames-v2/","location":"","key":"Table 2: <ins>Codes For Month</ins>"},{"type":"table","id":"table-validcodeformonthinchinesecalendar","node":{},"number":3,"caption":"Table 3: <ins>Codes For Leap Month In Chinese or Dangi Calendar</ins>","referencingIds":["_ref_2"],"namespace":"https://tc39.es/intl-displaynames-v2/","location":"","key":"Table 3: <ins>Codes For Leap Month In Chinese or Dangi Calendar</ins>"},{"type":"table","id":"table-validcodeformonthinhebrewcalendar","node":{},"number":4,"caption":"Table 4: <ins>Codes For Leap Month In Hebrew Calendar</ins>","referencingIds":["_ref_3"],"namespace":"https://tc39.es/intl-displaynames-v2/","location":"","key":"Table 4: <ins>Codes For Leap Month In Hebrew Calendar</ins>"},{"type":"table","id":"table-validcodeformonthincecalendar","node":{},"number":5,"caption":"Table 5: <ins>Codes For Additional Month In Coptic or Ethioptic Calendar</ins>","referencingIds":["_ref_4"],"namespace":"https://tc39.es/intl-displaynames-v2/","location":"","key":"Table 5: <ins>Codes For Additional Month In Coptic or Ethioptic Calendar</ins>"},{"type":"op","aoid":"IsValidMonthCode","refId":"sec-isvalidmonthcode","location":"","referencingIds":[],"key":"IsValidMonthCode"},{"type":"clause","id":"sec-isvalidmonthcode","aoid":"IsValidMonthCode","title":"IsValidMonthCode ( month , calendar )","titleHTML":"<ins>IsValidMonthCode ( <var>month</var> , <var>calendar</var> )</ins>","number":"1.3","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":["_ref_13"],"key":"IsValidMonthCode ( month , calendar )"},{"type":"clause","id":"sec-Intl.DisplayNames","aoid":null,"title":"Intl.DisplayNames ( locales, options )","titleHTML":"Intl.DisplayNames ( <var>locales</var>, <var>options</var> )","number":"1.4.1","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Intl.DisplayNames ( locales, options )"},{"type":"clause","id":"sec-intl-displaynames-constructor","aoid":null,"title":"The Intl.DisplayNames Constructor","titleHTML":"The Intl.DisplayNames Constructor","number":"1.4","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"The Intl.DisplayNames Constructor"},{"type":"clause","id":"sec-Intl.DisplayNames.prototype","aoid":null,"title":"Intl.DisplayNames.prototype","titleHTML":"Intl.DisplayNames.prototype","number":"1.5.1","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Intl.DisplayNames.prototype"},{"type":"clause","id":"sec-Intl.DisplayNames.supportedLocalesOf","aoid":null,"title":"Intl.DisplayNames.supportedLocalesOf ( locales [ , options ] )","titleHTML":"Intl.DisplayNames.supportedLocalesOf ( <var>locales</var> [ , <var>options</var> ] )","number":"1.5.2","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Intl.DisplayNames.supportedLocalesOf ( locales [ , options ] )"},{"type":"clause","id":"sec-Intl.DisplayNames-internal-slots","aoid":null,"title":"Internal slots","titleHTML":"Internal slots","number":"1.5.3","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":["_ref_5","_ref_6","_ref_7","_ref_11"],"key":"Internal slots"},{"type":"clause","id":"sec-properties-of-intl-displaynames-constructor","aoid":null,"title":"Properties of the Intl.DisplayNames Constructor","titleHTML":"Properties of the Intl.DisplayNames Constructor","number":"1.5","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Properties of the Intl.DisplayNames Constructor"},{"type":"clause","id":"sec-Intl.DisplayNames.prototype.constructor","aoid":null,"title":"Intl.DisplayNames.prototype.constructor","titleHTML":"Intl.DisplayNames.prototype.constructor","number":"1.6.1","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Intl.DisplayNames.prototype.constructor"},{"type":"clause","id":"sec-Intl.DisplayNames.prototype-@@tostringtag","aoid":null,"title":"Intl.DisplayNames.prototype[ @@toStringTag ]","titleHTML":"Intl.DisplayNames.prototype[ @@toStringTag ]","number":"1.6.2","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Intl.DisplayNames.prototype[ @@toStringTag ]"},{"type":"op","aoid":"Intl.DisplayNames.prototype.of","refId":"sec-Intl.DisplayNames.prototype.of","location":"","referencingIds":[],"key":"Intl.DisplayNames.prototype.of"},{"type":"clause","id":"sec-Intl.DisplayNames.prototype.of","aoid":"Intl.DisplayNames.prototype.of","title":"Intl.DisplayNames.prototype.of ( code )","titleHTML":"Intl.DisplayNames.prototype.of ( <var>code</var> )","number":"1.6.3","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Intl.DisplayNames.prototype.of ( code )"},{"type":"table","id":"table-displaynames-resolvedoptions-properties","node":{},"number":6,"caption":"Table 6: Resolved Options of DisplayNames Instances","referencingIds":["_ref_10"],"namespace":"https://tc39.es/intl-displaynames-v2/","location":"","key":"Table 6: Resolved Options of DisplayNames Instances"},{"type":"clause","id":"sec-Intl.DisplayNames.prototype.resolvedOptions","aoid":null,"title":"Intl.DisplayNames.prototype.resolvedOptions ( )","titleHTML":"Intl.DisplayNames.prototype.resolvedOptions ( )","number":"1.6.4","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Intl.DisplayNames.prototype.resolvedOptions ( )"},{"type":"clause","id":"sec-properties-of-intl-displaynames-prototype-object","aoid":null,"title":"Properties of the Intl.DisplayNames Prototype Object","titleHTML":"Properties of the Intl.DisplayNames Prototype Object","number":"1.6","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Properties of the Intl.DisplayNames Prototype Object"},{"type":"clause","id":"sec-properties-of-intl-displaynames-instances","aoid":null,"title":"Properties of Intl.DisplayNames Instances","titleHTML":"Properties of Intl.DisplayNames Instances","number":"1.7","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Properties of Intl.DisplayNames Instances"},{"type":"clause","id":"intl-displaynames-objects","aoid":null,"title":"DisplayNames Objects","titleHTML":"DisplayNames Objects","number":"1","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"DisplayNames Objects"},{"type":"clause","id":"sec-copyright-and-software-license","aoid":null,"title":"Copyright & Software License","titleHTML":"Copyright &amp; Software License","number":"A","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Copyright & Software License"}]</script><script>"use strict";
+<title>Intl.DisplayNames v2 Proposal</title><script type="application/json" id="menu-search-biblio">[{"type":"clause","id":"sec-intro","aoid":null,"title":"Introduction","titleHTML":"Introduction","number":"","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Introduction"},{"type":"op","aoid":"CanonicalCodeForDisplayNames","refId":"sec-canonicalcodefordisplaynames","location":"","referencingIds":[],"key":"CanonicalCodeForDisplayNames"},{"type":"clause","id":"sec-canonicalcodefordisplaynames","aoid":"CanonicalCodeForDisplayNames","title":"CanonicalCodeForDisplayNames ( type, code)","titleHTML":"CanonicalCodeForDisplayNames ( <var>type</var>, <var>code</var>)","number":"1.1.1","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":["_ref_9"],"key":"CanonicalCodeForDisplayNames ( type, code)"},{"type":"clause","id":"sec-intl-displaynames-abstracts","aoid":null,"title":"Abstract Operations for DisplayNames Objects","titleHTML":"Abstract Operations for DisplayNames Objects","number":"1.1","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Abstract Operations for DisplayNames Objects"},{"type":"clause","id":"sec-Intl.DisplayNames","aoid":null,"title":"Intl.DisplayNames ( locales, options )","titleHTML":"Intl.DisplayNames ( <var>locales</var>, <var>options</var> )","number":"1.2.1","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Intl.DisplayNames ( locales, options )"},{"type":"clause","id":"sec-intl-displaynames-constructor","aoid":null,"title":"The Intl.DisplayNames Constructor","titleHTML":"The Intl.DisplayNames Constructor","number":"1.2","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"The Intl.DisplayNames Constructor"},{"type":"clause","id":"sec-Intl.DisplayNames.prototype","aoid":null,"title":"Intl.DisplayNames.prototype","titleHTML":"Intl.DisplayNames.prototype","number":"1.3.1","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Intl.DisplayNames.prototype"},{"type":"clause","id":"sec-Intl.DisplayNames.supportedLocalesOf","aoid":null,"title":"Intl.DisplayNames.supportedLocalesOf ( locales [ , options ] )","titleHTML":"Intl.DisplayNames.supportedLocalesOf ( <var>locales</var> [ , <var>options</var> ] )","number":"1.3.2","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Intl.DisplayNames.supportedLocalesOf ( locales [ , options ] )"},{"type":"clause","id":"sec-Intl.DisplayNames-internal-slots","aoid":null,"title":"Internal slots","titleHTML":"Internal slots","number":"1.3.3","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":["_ref_0","_ref_1","_ref_2","_ref_4"],"key":"Internal slots"},{"type":"clause","id":"sec-properties-of-intl-displaynames-constructor","aoid":null,"title":"Properties of the Intl.DisplayNames Constructor","titleHTML":"Properties of the Intl.DisplayNames Constructor","number":"1.3","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Properties of the Intl.DisplayNames Constructor"},{"type":"clause","id":"sec-Intl.DisplayNames.prototype.constructor","aoid":null,"title":"Intl.DisplayNames.prototype.constructor","titleHTML":"Intl.DisplayNames.prototype.constructor","number":"1.4.1","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Intl.DisplayNames.prototype.constructor"},{"type":"clause","id":"sec-Intl.DisplayNames.prototype-@@tostringtag","aoid":null,"title":"Intl.DisplayNames.prototype[ @@toStringTag ]","titleHTML":"Intl.DisplayNames.prototype[ @@toStringTag ]","number":"1.4.2","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Intl.DisplayNames.prototype[ @@toStringTag ]"},{"type":"op","aoid":"Intl.DisplayNames.prototype.of","refId":"sec-Intl.DisplayNames.prototype.of","location":"","referencingIds":[],"key":"Intl.DisplayNames.prototype.of"},{"type":"clause","id":"sec-Intl.DisplayNames.prototype.of","aoid":"Intl.DisplayNames.prototype.of","title":"Intl.DisplayNames.prototype.of ( code )","titleHTML":"Intl.DisplayNames.prototype.of ( <var>code</var> )","number":"1.4.3","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Intl.DisplayNames.prototype.of ( code )"},{"type":"table","id":"table-displaynames-resolvedoptions-properties","node":{},"number":1,"caption":"Table 1: Resolved Options of DisplayNames Instances","referencingIds":["_ref_3"],"namespace":"https://tc39.es/intl-displaynames-v2/","location":"","key":"Table 1: Resolved Options of DisplayNames Instances"},{"type":"clause","id":"sec-Intl.DisplayNames.prototype.resolvedOptions","aoid":null,"title":"Intl.DisplayNames.prototype.resolvedOptions ( )","titleHTML":"Intl.DisplayNames.prototype.resolvedOptions ( )","number":"1.4.4","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Intl.DisplayNames.prototype.resolvedOptions ( )"},{"type":"clause","id":"sec-properties-of-intl-displaynames-prototype-object","aoid":null,"title":"Properties of the Intl.DisplayNames Prototype Object","titleHTML":"Properties of the Intl.DisplayNames Prototype Object","number":"1.4","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Properties of the Intl.DisplayNames Prototype Object"},{"type":"clause","id":"sec-properties-of-intl-displaynames-instances","aoid":null,"title":"Properties of Intl.DisplayNames Instances","titleHTML":"Properties of Intl.DisplayNames Instances","number":"1.5","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Properties of Intl.DisplayNames Instances"},{"type":"clause","id":"intl-displaynames-objects","aoid":null,"title":"DisplayNames Objects","titleHTML":"DisplayNames Objects","number":"1","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"DisplayNames Objects"},{"type":"clause","id":"sec-copyright-and-software-license","aoid":null,"title":"Copyright & Software License","titleHTML":"Copyright &amp; Software License","number":"A","namespace":"https://tc39.es/intl-displaynames-v2/","location":"","referencingIds":[],"key":"Copyright & Software License"}]</script><script>"use strict";
 
 function Search(menu) {
   this.menu = menu;
@@ -1851,7 +1851,7 @@ li.menu-search-result-term:before {
     display: none; 
   }
 }
-</style></head><body><div id="menu-toggle">☰</div><div id="menu-spacer"></div><div id="menu"><div id="menu-search"><input type="text" id="menu-search-box" placeholder="Search..."><div id="menu-search-results" class="inactive"></div></div><div id="menu-pins"><div class="menu-pane-header">Pins</div><ul id="menu-pins-list"></ul></div><div class="menu-pane-header">Table of Contents</div><div id="menu-toc"><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-intro" title="Introduction">Introduction</a></li><li><span class="item-toggle">◢</span><a href="#intl-displaynames-objects" title="DisplayNames Objects"><span class="secnum">1</span> DisplayNames Objects</a><ol class="toc"><li><span class="item-toggle">◢</span><a href="#sec-intl-displaynames-abstracts" title="Abstract Operations for DisplayNames Objects"><span class="secnum">1.1</span> Abstract Operations for DisplayNames Objects</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-canonicalcodefordisplaynames" title="CanonicalCodeForDisplayNames ( type, code, calendar)"><span class="secnum">1.1.1</span> CanonicalCodeForDisplayNames ( <var>type</var>, <var>code</var><ins>, <var>calendar</var></ins>)</a></li></ol></li><li><span class="item-toggle-none"></span><a href="#sec-isvalidweekdaycode" title="IsValidWeekdayCode ( weekday )"><span class="secnum">1.2</span> <ins>IsValidWeekdayCode ( <var>weekday</var> )</ins></a></li><li><span class="item-toggle-none"></span><a href="#sec-isvalidmonthcode" title="IsValidMonthCode ( month , calendar )"><span class="secnum">1.3</span> <ins>IsValidMonthCode ( <var>month</var> , <var>calendar</var> )</ins></a></li><li><span class="item-toggle">◢</span><a href="#sec-intl-displaynames-constructor" title="The Intl.DisplayNames Constructor"><span class="secnum">1.4</span> The Intl.DisplayNames Constructor</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-Intl.DisplayNames" title="Intl.DisplayNames ( locales, options )"><span class="secnum">1.4.1</span> Intl.DisplayNames ( <var>locales</var>, <var>options</var> )</a></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-properties-of-intl-displaynames-constructor" title="Properties of the Intl.DisplayNames Constructor"><span class="secnum">1.5</span> Properties of the Intl.DisplayNames Constructor</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-Intl.DisplayNames.prototype" title="Intl.DisplayNames.prototype"><span class="secnum">1.5.1</span> Intl.DisplayNames.prototype</a></li><li><span class="item-toggle-none"></span><a href="#sec-Intl.DisplayNames.supportedLocalesOf" title="Intl.DisplayNames.supportedLocalesOf ( locales [ , options ] )"><span class="secnum">1.5.2</span> Intl.DisplayNames.supportedLocalesOf ( <var>locales</var> [ , <var>options</var> ] )</a></li><li><span class="item-toggle-none"></span><a href="#sec-Intl.DisplayNames-internal-slots" title="Internal slots"><span class="secnum">1.5.3</span> Internal slots</a></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-properties-of-intl-displaynames-prototype-object" title="Properties of the Intl.DisplayNames Prototype Object"><span class="secnum">1.6</span> Properties of the Intl.DisplayNames Prototype Object</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-Intl.DisplayNames.prototype.constructor" title="Intl.DisplayNames.prototype.constructor"><span class="secnum">1.6.1</span> Intl.DisplayNames.prototype.constructor</a></li><li><span class="item-toggle-none"></span><a href="#sec-Intl.DisplayNames.prototype-@@tostringtag" title="Intl.DisplayNames.prototype[ @@toStringTag ]"><span class="secnum">1.6.2</span> Intl.DisplayNames.prototype[ @@toStringTag ]</a></li><li><span class="item-toggle-none"></span><a href="#sec-Intl.DisplayNames.prototype.of" title="Intl.DisplayNames.prototype.of ( code )"><span class="secnum">1.6.3</span> Intl.DisplayNames.prototype.of ( <var>code</var> )</a></li><li><span class="item-toggle-none"></span><a href="#sec-Intl.DisplayNames.prototype.resolvedOptions" title="Intl.DisplayNames.prototype.resolvedOptions ( )"><span class="secnum">1.6.4</span> Intl.DisplayNames.prototype.resolvedOptions ( )</a></li></ol></li><li><span class="item-toggle-none"></span><a href="#sec-properties-of-intl-displaynames-instances" title="Properties of Intl.DisplayNames Instances"><span class="secnum">1.7</span> Properties of Intl.DisplayNames Instances</a></li></ol></li><li><span class="item-toggle-none"></span><a href="#sec-copyright-and-software-license" title="Copyright &amp; Software License"><span class="secnum">A</span> Copyright &amp; Software License</a></li></ol></div></div><div id="spec-container"><h1 class="version first">Stage 1 Draft / January 19, 2021</h1><h1 class="title">Intl.DisplayNames v2 Proposal</h1>
+</style></head><body><div id="menu-toggle">☰</div><div id="menu-spacer"></div><div id="menu"><div id="menu-search"><input type="text" id="menu-search-box" placeholder="Search..."><div id="menu-search-results" class="inactive"></div></div><div id="menu-pins"><div class="menu-pane-header">Pins</div><ul id="menu-pins-list"></ul></div><div class="menu-pane-header">Table of Contents</div><div id="menu-toc"><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-intro" title="Introduction">Introduction</a></li><li><span class="item-toggle">◢</span><a href="#intl-displaynames-objects" title="DisplayNames Objects"><span class="secnum">1</span> DisplayNames Objects</a><ol class="toc"><li><span class="item-toggle">◢</span><a href="#sec-intl-displaynames-abstracts" title="Abstract Operations for DisplayNames Objects"><span class="secnum">1.1</span> Abstract Operations for DisplayNames Objects</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-canonicalcodefordisplaynames" title="CanonicalCodeForDisplayNames ( type, code)"><span class="secnum">1.1.1</span> CanonicalCodeForDisplayNames ( <var>type</var>, <var>code</var>)</a></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-intl-displaynames-constructor" title="The Intl.DisplayNames Constructor"><span class="secnum">1.2</span> The Intl.DisplayNames Constructor</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-Intl.DisplayNames" title="Intl.DisplayNames ( locales, options )"><span class="secnum">1.2.1</span> Intl.DisplayNames ( <var>locales</var>, <var>options</var> )</a></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-properties-of-intl-displaynames-constructor" title="Properties of the Intl.DisplayNames Constructor"><span class="secnum">1.3</span> Properties of the Intl.DisplayNames Constructor</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-Intl.DisplayNames.prototype" title="Intl.DisplayNames.prototype"><span class="secnum">1.3.1</span> Intl.DisplayNames.prototype</a></li><li><span class="item-toggle-none"></span><a href="#sec-Intl.DisplayNames.supportedLocalesOf" title="Intl.DisplayNames.supportedLocalesOf ( locales [ , options ] )"><span class="secnum">1.3.2</span> Intl.DisplayNames.supportedLocalesOf ( <var>locales</var> [ , <var>options</var> ] )</a></li><li><span class="item-toggle-none"></span><a href="#sec-Intl.DisplayNames-internal-slots" title="Internal slots"><span class="secnum">1.3.3</span> Internal slots</a></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-properties-of-intl-displaynames-prototype-object" title="Properties of the Intl.DisplayNames Prototype Object"><span class="secnum">1.4</span> Properties of the Intl.DisplayNames Prototype Object</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-Intl.DisplayNames.prototype.constructor" title="Intl.DisplayNames.prototype.constructor"><span class="secnum">1.4.1</span> Intl.DisplayNames.prototype.constructor</a></li><li><span class="item-toggle-none"></span><a href="#sec-Intl.DisplayNames.prototype-@@tostringtag" title="Intl.DisplayNames.prototype[ @@toStringTag ]"><span class="secnum">1.4.2</span> Intl.DisplayNames.prototype[ @@toStringTag ]</a></li><li><span class="item-toggle-none"></span><a href="#sec-Intl.DisplayNames.prototype.of" title="Intl.DisplayNames.prototype.of ( code )"><span class="secnum">1.4.3</span> Intl.DisplayNames.prototype.of ( <var>code</var> )</a></li><li><span class="item-toggle-none"></span><a href="#sec-Intl.DisplayNames.prototype.resolvedOptions" title="Intl.DisplayNames.prototype.resolvedOptions ( )"><span class="secnum">1.4.4</span> Intl.DisplayNames.prototype.resolvedOptions ( )</a></li></ol></li><li><span class="item-toggle-none"></span><a href="#sec-properties-of-intl-displaynames-instances" title="Properties of Intl.DisplayNames Instances"><span class="secnum">1.5</span> Properties of Intl.DisplayNames Instances</a></li></ol></li><li><span class="item-toggle-none"></span><a href="#sec-copyright-and-software-license" title="Copyright &amp; Software License"><span class="secnum">A</span> Copyright &amp; Software License</a></li></ol></div></div><div id="spec-container"><h1 class="version first">Stage 1 Draft / January 19, 2021</h1><h1 class="title">Intl.DisplayNames v2 Proposal</h1>
 
 <emu-intro id="sec-intro">
   <h1>Introduction</h1>
@@ -1868,296 +1868,40 @@ li.menu-search-result-term:before {
     <h1><span class="secnum">1.1</span> Abstract Operations for DisplayNames Objects</h1>
 
     <emu-clause id="sec-canonicalcodefordisplaynames" aoid="CanonicalCodeForDisplayNames">
-      <h1><span class="secnum">1.1.1</span> CanonicalCodeForDisplayNames ( <var>type</var>, <var>code</var><ins>, <var>calendar</var></ins>)</h1>
+      <h1><span class="secnum">1.1.1</span> CanonicalCodeForDisplayNames ( <var>type</var>, <var>code</var>)</h1>
       <p>
-      The CanonicalCodeForDisplayNames abstract operation is called with arguments <var>type</var>, <del>and </del><var>code</var><ins>, and <var>calendar</var></ins>. It verifies that the <var>code</var> argument represents a well-formed code according to the <var>type</var> argument<ins>, and also <var>calendar</var> argument if the <var>type</var> argument is <code>"month"</code>,</ins> and returns the case-regularized form of the <var>code</var>. The algorithm refers to <a href="https://www.unicode.org/reports/tr35/#Identifiers">UTS 35's Unicode Language and Locale Identifiers grammar</a>. The following steps are taken:
+      The CanonicalCodeForDisplayNames abstract operation is called with arguments <var>type</var>, <var>code</var>. It verifies that the <var>code</var> argument represents a well-formed code according to the <var>type</var> argument and returns the case-regularized form of the <var>code</var>. The algorithm refers to <a href="https://www.unicode.org/reports/tr35/#Identifiers">UTS 35's Unicode Language and Locale Identifiers grammar</a>. The following steps are taken:
       </p>
-      <emu-alg><ol><li>If <var>type</var> is <code>"language"</code>, then<ol><li>If <var>code</var> does not matches the <code>unicode_language_id</code> production, throw a <emu-val>RangeError</emu-val> exceptipon.</li><li>If <emu-xref aoid="IsStructurallyValidLanguageTag"><a href="https://tc39.es/ecma402/#sec-isstructurallyvalidlanguagetag">IsStructurallyValidLanguageTag</a></emu-xref>(<var>code</var>) is <emu-val>false</emu-val>, throw a <emu-val>RangeError</emu-val> exception.</li><li>Set <var>code</var> to <emu-xref aoid="CanonicalizeUnicodeLocaleId"><a href="https://tc39.es/ecma402/#sec-canonicalizeunicodelocaleid">CanonicalizeUnicodeLocaleId</a></emu-xref>(<var>code</var>).</li><li>Return <var>code</var>.</li></ol></li><li>If <var>type</var> is <code>"region"</code>, then<ol><li>If <var>code</var> does not matches the <code>unicode_region_subtag</code> production, throw a <emu-val>RangeError</emu-val> exceptipon.</li><li>Let <var>code</var> be the result of mapping <var>code</var> to upper case as described in <emu-xref href="#sec-case-sensitivity-and-case-mapping"><a href="https://tc39.es/ecma402/#sec-case-sensitivity-and-case-mapping">6.1</a></emu-xref>.</li><li>Return <var>code</var>.</li></ol></li><li>If <var>type</var> is <code>"script"</code>, then<ol><li>If <var>code</var> does not matches the <code>unicode_script_subtag</code> production, throw a <emu-val>RangeError</emu-val> exceptipon.</li><li>Let <var>code</var> be the result of mapping the first character in <var>code</var> to upper case, and mapping the second, third and fourth character in <var>code</var> to lower case, as described in <emu-xref href="#sec-case-sensitivity-and-case-mapping"><a href="https://tc39.es/ecma402/#sec-case-sensitivity-and-case-mapping">6.1</a></emu-xref>.</li><li>Return <var>code</var>.</li></ol></li><li><ins>If <var>type</var> is <code>"weekday"</code>, then,</ins><ol><li><ins>If the result of <emu-xref aoid="IsValidWeekdayCode" id="_ref_12"><a href="#sec-isvalidweekdaycode">IsValidWeekdayCode</a></emu-xref>(<var>code</var>) is <emu-val>false</emu-val>, throw a <emu-val>RangeError</emu-val> exception.</ins></li><li><ins>Return <var>code</var>.</ins></li></ol></li><li><ins>If <var>type</var> is <code>"month"</code>, then,</ins><ol><li><ins>If the result of <emu-xref aoid="IsValidMonthCode" id="_ref_13"><a href="#sec-isvalidmonthcode">IsValidMonthCode</a></emu-xref>(<var>code</var>, <var>calendar</var>) is <emu-val>false</emu-val>, throw a <emu-val>RangeError</emu-val> exception.</ins></li><li><ins>Return <var>code</var>.</ins></li></ol></li><li><ins>If <var>type</var> is <code>"calendar"</code> or <code>"numberingSystem"</code>, then</ins><ol><li><ins>If <var>code</var> does not match the Unicode Locale Identifier <code>type</code> nonterminal, throw a <emu-val>RangeError</emu-val> exception.</ins></li><li><ins>Let <var>code</var> be the result of mapping <var>code</var> to lower case as described in <emu-xref href="#sec-case-sensitivity-and-case-mapping"><a href="https://tc39.es/ecma402/#sec-case-sensitivity-and-case-mapping">6.1</a></emu-xref>.</ins></li><li><ins>Return <var>code</var>.</ins></li></ol></li><li><ins>If <var>type</var> is <code>"unit"</code>, then</ins><ol><li><ins>If the result of <emu-xref aoid="IsWellFormedUnitIdentifier"><a href="https://tc39.es/ecma402/#sec-iswellformedunitidentifier">IsWellFormedUnitIdentifier</a></emu-xref>(<var>code</var>) is <emu-val>false</emu-val>, throw a <emu-val>RangeError</emu-val> exception.</ins></li><li><ins>Return <var>code</var>.</ins></li></ol></li><li><ins>If <var>type</var> is <code>"timeZone"</code>, then</ins><ol><li><ins>If the result of <emu-xref aoid="IsValidTimeZoneName"><a href="https://tc39.es/ecma402/#sec-isvalidtimezonename">IsValidTimeZoneName</a></emu-xref>(<var>code</var>) is <emu-val>false</emu-val>, then throw a <emu-val>RangeError</emu-val> exception.</ins></li><li><ins>Let <var>code</var> be <emu-xref aoid="CanonicalizeTimeZoneName"><a href="https://tc39.es/ecma402/#sec-canonicalizetimezonenam">CanonicalizeTimeZoneName</a></emu-xref>(<var>code</var>). </ins></li><li><ins>Return <var>code</var>.</ins></li></ol></li><li><emu-xref href="#assert"><a href="https://tc39.es/ecma262/#assert">Assert</a></emu-xref>: <var>type</var> is <code>"currency"</code>.</li><li>If !&nbsp;<emu-xref aoid="IsWellFormedCurrencyCode"><a href="https://tc39.es/ecma402/#sec-iswellformedcurrencycode">IsWellFormedCurrencyCode</a></emu-xref>(<var>code</var>) is <emu-val>false</emu-val>, throw a <emu-val>RangeError</emu-val> exceptipon.</li><li>Let <var>code</var> be the result of mapping <var>code</var> to upper case as described in <emu-xref href="#sec-case-sensitivity-and-case-mapping"><a href="https://tc39.es/ecma402/#sec-case-sensitivity-and-case-mapping">6.1</a></emu-xref>.</li><li>Return <var>code</var>.</li></ol></emu-alg>
+      <emu-alg><ol><li>If <var>type</var> is <code>"language"</code>, then<ol><li>If <var>code</var> does not matches the <code>unicode_language_id</code> production, throw a <emu-val>RangeError</emu-val> exceptipon.</li><li>If <emu-xref aoid="IsStructurallyValidLanguageTag"><a href="https://tc39.es/ecma402/#sec-isstructurallyvalidlanguagetag">IsStructurallyValidLanguageTag</a></emu-xref>(<var>code</var>) is <emu-val>false</emu-val>, throw a <emu-val>RangeError</emu-val> exception.</li><li>Set <var>code</var> to <emu-xref aoid="CanonicalizeUnicodeLocaleId"><a href="https://tc39.es/ecma402/#sec-canonicalizeunicodelocaleid">CanonicalizeUnicodeLocaleId</a></emu-xref>(<var>code</var>).</li><li>Return <var>code</var>.</li></ol></li><li>If <var>type</var> is <code>"region"</code>, then<ol><li>If <var>code</var> does not matches the <code>unicode_region_subtag</code> production, throw a <emu-val>RangeError</emu-val> exceptipon.</li><li>Let <var>code</var> be the result of mapping <var>code</var> to upper case as described in <emu-xref href="#sec-case-sensitivity-and-case-mapping"><a href="https://tc39.es/ecma402/#sec-case-sensitivity-and-case-mapping">6.1</a></emu-xref>.</li><li>Return <var>code</var>.</li></ol></li><li>If <var>type</var> is <code>"script"</code>, then<ol><li>If <var>code</var> does not matches the <code>unicode_script_subtag</code> production, throw a <emu-val>RangeError</emu-val> exceptipon.</li><li>Let <var>code</var> be the result of mapping the first character in <var>code</var> to upper case, and mapping the second, third and fourth character in <var>code</var> to lower case, as described in <emu-xref href="#sec-case-sensitivity-and-case-mapping"><a href="https://tc39.es/ecma402/#sec-case-sensitivity-and-case-mapping">6.1</a></emu-xref>.</li><li>Return <var>code</var>.</li></ol></li><li><ins>If <var>type</var> is <code>"calendar"</code>, then</ins><ol><li><ins>If <var>code</var> does not match the Unicode Locale Identifier <code>type</code> nonterminal, throw a <emu-val>RangeError</emu-val> exception.</ins></li><li><ins>Let <var>code</var> be the result of mapping <var>code</var> to lower case as described in <emu-xref href="#sec-case-sensitivity-and-case-mapping"><a href="https://tc39.es/ecma402/#sec-case-sensitivity-and-case-mapping">6.1</a></emu-xref>.</ins></li><li><ins>Return <var>code</var>.</ins></li></ol></li><li><ins>If <var>type</var> is <code>"unit"</code>, then</ins><ol><li><ins>If the result of <emu-xref aoid="IsWellFormedUnitIdentifier"><a href="https://tc39.es/ecma402/#sec-iswellformedunitidentifier">IsWellFormedUnitIdentifier</a></emu-xref>(<var>code</var>) is <emu-val>false</emu-val>, throw a <emu-val>RangeError</emu-val> exception.</ins></li><li><ins>Return <var>code</var>.</ins></li></ol></li><li><emu-xref href="#assert"><a href="https://tc39.es/ecma262/#assert">Assert</a></emu-xref>: <var>type</var> is <code>"currency"</code>.</li><li>If !&nbsp;<emu-xref aoid="IsWellFormedCurrencyCode"><a href="https://tc39.es/ecma402/#sec-iswellformedcurrencycode">IsWellFormedCurrencyCode</a></emu-xref>(<var>code</var>) is <emu-val>false</emu-val>, throw a <emu-val>RangeError</emu-val> exceptipon.</li><li>Let <var>code</var> be the result of mapping <var>code</var> to upper case as described in <emu-xref href="#sec-case-sensitivity-and-case-mapping"><a href="https://tc39.es/ecma402/#sec-case-sensitivity-and-case-mapping">6.1</a></emu-xref>.</li><li>Return <var>code</var>.</li></ol></emu-alg>
     </emu-clause>
   </emu-clause>
 
-    <emu-clause id="sec-isvalidweekdaycode" aoid="IsValidWeekdayCode">
-      <h1><span class="secnum">1.2</span> <ins>IsValidWeekdayCode ( <var>weekday</var> )</ins></h1>
-      <p>
-      <ins>The IsValidWeekdayCode abstract operation is called with arguments <var>weekday</var>. It verifies that the <var>weekday</var> argument represents a valid weekday code. The following steps are taken:</ins>
-      </p>
-      <emu-alg><ol><li><ins>If <var>weekday</var> is listed in <emu-xref href="#table-validcodeforweekday" id="_ref_0"><a href="#table-validcodeforweekday">Table 1</a></emu-xref>, return <emu-val>true</emu-val>.</ins></li><li><ins>Return <emu-val>false</emu-val>.</ins></li></ol></emu-alg>
-
-      <emu-table id="table-validcodeforweekday"><figure><figcaption>Table 1: <ins>Codes For Date Time of DisplayNames</ins></figcaption>
-        
-        <table class="real-table">
-          <thead>
-            <tr>
-              <th><ins>Code</ins></th>
-              <th><ins>Description</ins></th>
-            </tr>
-          </thead>
-          <tbody><tr>
-            <td><ins><code>"1"</code></ins></td>
-            <td><ins>Monday, e.g. M, Mon, Monday, etc.</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"2"</code></ins></td>
-            <td><ins>Tuesday, e.g. Tu, Tue, Tuesday, etc.</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"3"</code></ins></td>
-            <td><ins>Wednesday, e.g. W, Wed, Wednesday, etc.</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"4"</code></ins></td>
-            <td><ins>Thursday, e.g. Th, Thur, Thursday, etc.</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"5"</code></ins></td>
-            <td><ins>Friday, e.g. F, Fri, Friday, etc.</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"6"</code></ins></td>
-            <td><ins>Saturday, e.g. Sa, Sat, Saturday, etc.</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"7"</code></ins></td>
-            <td><ins>Sunday, e.g. Su, Sun, Sunday, etc.</ins></td>
-          </tr>
-        </tbody></table>
-      </figure></emu-table>
-
-    </emu-clause>
-
-    <emu-clause id="sec-isvalidmonthcode" aoid="IsValidMonthCode">
-      <h1><span class="secnum">1.3</span> <ins>IsValidMonthCode ( <var>month</var> , <var>calendar</var> )</ins></h1>
-      <p>
-      <ins>The IsValidMonthCode abstract operation is called with arguments <var>month</var> and <var>calendar</var>. It verifies that the <var>month</var> argument represents a valid month code in the calendar system <var>calendar</var>. The following steps are taken:</ins>
-      </p>
-      <emu-alg><ol><li><ins>If <var>month</var> is listed in the column <code>Code</code> of <emu-xref href="#table-validcodeformonth" id="_ref_1"><a href="#table-validcodeformonth">Table 2</a></emu-xref>, return <emu-val>true</emu-val>.</ins></li><li><ins>if <var>calendar</var> is <code>"chinese"</code> or <code>"dangi"</code>, then<ol><li><ins>If <var>month</var> is listed in the column <code>Code</code> of <emu-xref href="#table-validcodeformonthinchinesecalendar" id="_ref_2"><a href="#table-validcodeformonthinchinesecalendar">Table 3</a></emu-xref>, return <emu-val>true</emu-val>.</ins></li></ol></ins></li><li><ins>if <var>calendar</var> is <code>"hebrew"</code>, then<ol><li><ins>If <var>month</var> is listed in the column <code>Code</code> of <emu-xref href="#table-validcodeformonthinhebrewcalendar" id="_ref_3"><a href="#table-validcodeformonthinhebrewcalendar">Table 4</a></emu-xref>, return <emu-val>true</emu-val>.</ins></li></ol></ins></li><li><ins>if <var>calendar</var> is <code>"coptic"</code>, <code>"ethiopic"</code> or <code>"ethioaa"</code> then<ol><li><ins>If <var>month</var> is listed in the column <code>Code</code> of <emu-xref href="#table-validcodeformonthincecalendar" id="_ref_4"><a href="#table-validcodeformonthincecalendar">Table 5</a></emu-xref>, return <emu-val>true</emu-val>.</ins></li></ol></ins></li><li><ins>Return <emu-val>false</emu-val>.</ins>
-      </li></ol></emu-alg>
-
-      <emu-table id="table-validcodeformonth"><figure><figcaption>Table 2: <ins>Codes For Month</ins></figcaption>
-        
-        <table class="real-table">
-          <thead>
-            <tr>
-              <th><ins>Code</ins></th>
-              <th><ins>Description</ins></th>
-              <th><ins>In Coptic Calendar</ins></th>
-              <th><ins>In Ethiopic Calendar</ins></th>
-              <th><ins>In Hebrew Calendar</ins></th>
-            </tr>
-          </thead>
-          <tbody><tr>
-            <td><ins><code>"1"</code></ins></td>
-            <td><ins>The first regular, non-leap month of the year, e.g. Jan, January.</ins></td>
-            <td><ins>Tout</ins></td>
-            <td><ins>Meskerem</ins></td>
-            <td><ins>Tishri</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"2"</code></ins></td>
-            <td><ins>The second regular, non-leap month of the year, e.g. Feb, February.</ins></td>
-            <td><ins>Baba</ins></td>
-            <td><ins>Tekemt</ins></td>
-            <td><ins>Heshvan</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"3"</code></ins></td>
-            <td><ins>The third regular, non-leap month of the year, e.g. Mar, March.</ins></td>
-            <td><ins>Hator</ins></td>
-            <td><ins>Hedar</ins></td>
-            <td><ins>Kislev</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"4"</code></ins></td>
-            <td><ins>The fourth regular, non-leap month of the year, e.g. Apr, April.</ins></td>
-            <td><ins>Kiahk</ins></td>
-            <td><ins>Tahsas</ins></td>
-            <td><ins>Tevet</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"5"</code></ins></td>
-            <td><ins>The fifth regular, non-leap month of the year, e.g. May.</ins></td>
-            <td><ins>Toba</ins></td>
-            <td><ins>Ter</ins></td>
-            <td><ins>Shevat</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"6"</code></ins></td>
-            <td><ins>The sixth regular, non-leap month of the year, e.g. Jun, June.</ins></td>
-            <td><ins>Amshir</ins></td>
-            <td><ins>Yekatit</ins></td>
-            <td><ins>Adar or Adar II</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"7"</code></ins></td>
-            <td><ins>The seventh regular, non-leap month of the year, e.g. Jul, July.</ins></td>
-            <td><ins>Baramhat</ins></td>
-            <td><ins>Megabit</ins></td>
-            <td><ins>Nisan</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"8"</code></ins></td>
-            <td><ins>The eigth regular, non-leap month of the year, e.g. Aug, August.</ins></td>
-            <td><ins>Baramouda</ins></td>
-            <td><ins>Miazia</ins></td>
-            <td><ins>Iyar</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"9"</code></ins></td>
-            <td><ins>The ninth regular, non-leap month of the year, e.g. Sep, September.</ins></td>
-            <td><ins>Bashans</ins></td>
-            <td><ins>Genbot</ins></td>
-            <td><ins>Sivan</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"10"</code></ins></td>
-            <td><ins>The tenth regular, non-leap month of the year, e.g. Oct, October.</ins></td>
-            <td><ins>Paona</ins></td>
-            <td><ins>Sene</ins></td>
-            <td><ins>Tamuz</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"11"</code></ins></td>
-            <td><ins>The eleventh regular, non-leap month of the year, e.g. Nov, November.</ins></td>
-            <td><ins>Epep</ins></td>
-            <td><ins>Hamle</ins></td>
-            <td><ins>Av</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"12"</code></ins></td>
-            <td><ins>The twelfth regular, non-leap month of the year, e.g. Dec, December.</ins></td>
-            <td><ins>Mesra</ins></td>
-            <td><ins>Nehasse</ins></td>
-            <td><ins>Elul</ins></td>
-          </tr>
-        </tbody></table>
-      </figure></emu-table>
-
-      <emu-table id="table-validcodeformonthinchinesecalendar"><figure><figcaption>Table 3: <ins>Codes For Leap Month In Chinese or Dangi Calendar</ins></figcaption>
-        
-        <table class="real-table">
-          <thead>
-            <tr>
-              <th><ins>Code</ins></th>
-              <th><ins>Description</ins></th>
-            </tr>
-          </thead>
-          <tbody><tr>
-            <td><ins><code>"1L"</code></ins></td>
-            <td><ins>The leap month that follows the first regular month in the year.</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"2L"</code></ins></td>
-            <td><ins>The leap month that follows the second regular month in the year.</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"3L"</code></ins></td>
-            <td><ins>The leap month that follows the third regular month in the year.</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"4L"</code></ins></td>
-            <td><ins>The leap month that follows the 4th regular month in the year.</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"5L"</code></ins></td>
-            <td><ins>The leap month that follows the 5th regular month in the year.</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"6L"</code></ins></td>
-            <td><ins>The leap month that follows the 6th regular month in the year.</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"7L"</code></ins></td>
-            <td><ins>The leap month that follows the 7th regular month in the year.</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"8L"</code></ins></td>
-            <td><ins>The leap month that follows the 8th regular month in the year.</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"9L"</code></ins></td>
-            <td><ins>The leap month that follows the 9th regular month in the year.</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"10L"</code></ins></td>
-            <td><ins>The leap month that follows the 10th regular month in the year.</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"11L"</code></ins></td>
-            <td><ins>The leap month that follows the 11th regular month in the year.</ins></td>
-          </tr>
-          <tr>
-            <td><ins><code>"12L"</code></ins></td>
-            <td><ins>The leap month that follows the 12th regular month in the year.</ins></td>
-          </tr>
-        </tbody></table>
-      </figure></emu-table>
-
-      <emu-table id="table-validcodeformonthinhebrewcalendar"><figure><figcaption>Table 4: <ins>Codes For Leap Month In Hebrew Calendar</ins></figcaption>
-        
-        <table class="real-table">
-          <thead>
-            <tr>
-              <th><ins>Code</ins></th>
-              <th><ins>Description</ins></th>
-              <th><ins>In Hebrew Calendar</ins></th>
-            </tr>
-          </thead>
-          <tbody><tr>
-            <td><ins><code>"5L"</code></ins></td>
-            <td><ins>The leap month that follows the fifth regular month in the leap year.</ins></td>
-            <td><ins>Adar I</ins></td>
-          </tr>
-        </tbody></table>
-      </figure></emu-table>
-
-      <emu-table id="table-validcodeformonthincecalendar"><figure><figcaption>Table 5: <ins>Codes For Additional Month In Coptic or Ethioptic Calendar</ins></figcaption>
-        
-        <table class="real-table">
-          <thead>
-            <tr>
-              <th><ins>Code</ins></th>
-              <th><ins>Description</ins></th>
-              <th><ins>In Coptic Calendar</ins></th>
-              <th><ins>In Ethioptic Calendar</ins></th>
-            </tr>
-          </thead>
-          <tbody><tr>
-            <td><ins><code>"13"</code></ins></td>
-            <td><ins>The thirteenth month of the year.</ins></td>
-            <td><ins>Nasie</ins></td>
-            <td><ins>Pagumen</ins></td>
-          </tr>
-        </tbody></table>
-      </figure></emu-table>
-
-    </emu-clause>
-
   <emu-clause id="sec-intl-displaynames-constructor">
-    <h1><span class="secnum">1.4</span> The Intl.DisplayNames Constructor</h1>
+    <h1><span class="secnum">1.2</span> The Intl.DisplayNames Constructor</h1>
 
     <p>
       The DisplayNames <emu-xref href="#constructor"><a href="https://tc39.es/ecma262/#constructor">constructor</a></emu-xref> is a standard built-in property of the Intl object.</p>
 
     <emu-clause id="sec-Intl.DisplayNames">
-      <h1><span class="secnum">1.4.1</span> Intl.DisplayNames ( <var>locales</var>, <var>options</var> )</h1>
+      <h1><span class="secnum">1.2.1</span> Intl.DisplayNames ( <var>locales</var>, <var>options</var> )</h1>
 
       <p>
         When the <emu-val>Intl.DisplayNames</emu-val> function is called with arguments <var>locales</var> and <var>options</var>, the following steps are taken:
       </p>
 
-      <emu-alg><ol><li>If NewTarget is <emu-val>undefined</emu-val>, throw a <emu-val>TypeError</emu-val> exception.</li><li>Let <var>displayNames</var> be ?&nbsp;<emu-xref aoid="OrdinaryCreateFromConstructor" id="_ref_14"><a href="https://tc39.es/ecma262/#sec-ordinarycreatefromconstructor">OrdinaryCreateFromConstructor</a></emu-xref>(NewTarget, <code>"%DisplayNamesPrototype%"</code>, « [[InitializedDisplayNames]], [[Locale]], [[Style]], [[Type]], [[Fallback]], [[Fields]] »).</li><li>Let <var>requestedLocales</var> be ?&nbsp;<emu-xref aoid="CanonicalizeLocaleList"><a href="https://tc39.es/ecma402/#sec-canonicalizelocalelist">CanonicalizeLocaleList</a></emu-xref>(<var>locales</var>).</li><li>Let <var>options</var> be ?&nbsp;<emu-xref aoid="ToObject" id="_ref_15"><a href="https://tc39.es/ecma262/#sec-toobject">ToObject</a></emu-xref>(<var>options</var>).</li><li>Let <var>opt</var> be a new <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.es/ecma262/#sec-list-and-record-specification-type">Record</a></emu-xref>.</li><li>Let <var>localeData</var> be %DisplayNames%.[[LocaleData]].</li><li>Let <var>matcher</var> be ?&nbsp;<emu-xref aoid="GetOption"><a href="https://tc39.es/ecma402/#sec-getoption">GetOption</a></emu-xref>(<var>options</var>, <code>"localeMatcher"</code>, <code>"string"</code>, « <code>"lookup"</code>, <code>"best fit"</code> », <code>"best fit"</code>).</li><li>Set <var>opt</var>.[[localeMatcher]] to <var>matcher</var>.</li><li><ins>Let <var>style</var> be ?&nbsp;<emu-xref aoid="GetOption"><a href="https://tc39.es/ecma402/#sec-getoption">GetOption</a></emu-xref>(<var>options</var>, <code>"style"</code>, <code>"string"</code>, « <code>"narrow"</code>, <code>"short"</code>, <code>"long"</code> », <code>"long"</code>).</ins></li><li><ins>Set <var>displayNames</var>.[[Style]] to <var>style</var>.</ins></li><li><ins>Let <var>type</var> be ?&nbsp;<emu-xref aoid="GetOption"><a href="https://tc39.es/ecma402/#sec-getoption">GetOption</a></emu-xref>(<var>options</var>, <code>"type"</code>, <code>"string"</code>, « <code>"language"</code>, <code>"region"</code>, <code>"script"</code>, <code>"currency"</code>, <code>"weekday"</code>, <code>"month"</code>,  <code>"calendar"</code>, <code>"numberingSystem"</code>, <code>"unit"</code>, <code>"timeZone"</code> », <emu-val>undefined</emu-val>).</ins></li><li><ins>If <var>type</var> is <emu-val>undefined</emu-val>, throw a <emu-val>TypeError</emu-val> exception.</ins></li><li><ins>Set <var>displayNames</var>.[[Type]] to <var>type</var>.</ins></li><li><ins>If <var>type</var> is <code>"weekday"</code> or <code>"month"</code>, then</ins><ol><li><ins>Let <var>calendar</var> be ?&nbsp;<emu-xref aoid="GetOption"><a href="https://tc39.es/ecma402/#sec-getoption">GetOption</a></emu-xref>(<var>options</var>, <code>"calendar"</code>, <code>"string"</code>, <emu-val>undefined</emu-val>, <emu-val>undefined</emu-val>).</ins></li><li><ins>If <var>calendar</var> is not <emu-val>undefined</emu-val>, then</ins><ol><li><ins>If <var>calendar</var> does not match the <code>(3*8alphanum) *("-" (3*8alphanum))</code> sequence, throw a <emu-val>RangeError</emu-val> exception.</ins></li></ol></li><li><ins>Set <var>opt</var>.[[ca]] to <var>calendar</var>.</ins></li></ol></li><li>Let <var>r</var> be <emu-xref aoid="ResolveLocale"><a href="https://tc39.es/ecma402/#sec-resolvelocale">ResolveLocale</a></emu-xref>(%DisplayNames%.[[AvailableLocales]], <var>requestedLocales</var>, <var>opt</var>, %DisplayNames%.[[RelevantExtensionKeys]]).</li><li><del>Let <var>style</var> be ?&nbsp;<emu-xref aoid="GetOption"><a href="https://tc39.es/ecma402/#sec-getoption">GetOption</a></emu-xref>(<var>options</var>, <code>"style"</code>, <code>"string"</code>, « <code>"narrow"</code>, <code>"short"</code>, <code>"long"</code> », <code>"long"</code>).</del></li><li><del>Set <var>displayNames</var>.[[Style]] to <var>style</var>.</del></li><li><del>Let <var>type</var> be ?&nbsp;<emu-xref aoid="GetOption"><a href="https://tc39.es/ecma402/#sec-getoption">GetOption</a></emu-xref>(<var>options</var>, <code>"type"</code>, <code>"string"</code>, « <code>"language"</code>, <code>"region"</code>, <code>"script"</code>, <code>"currency"</code> », <emu-val>undefined</emu-val>).</del></li><li><del>If <var>type</var> is <emu-val>undefined</emu-val>, throw a <emu-val>TypeError</emu-val> exception.</del></li><li><del>Set <var>displayNames</var>.[[Type]] to <var>type</var>.</del></li><li>Let <var>fallback</var> be ?&nbsp;<emu-xref aoid="GetOption"><a href="https://tc39.es/ecma402/#sec-getoption">GetOption</a></emu-xref>(<var>options</var>, <code>"fallback"</code>, <code>"string"</code>, « <code>"code"</code>, <code>"none"</code> », <code>"code"</code>).</li><li>Set <var>displayNames</var>.[[Fallback]] to <var>fallback</var>.</li><li>Set <var>displayNames</var>.[[Locale]] to the value of <var>r</var>.[[Locale]].</li><li><ins>Let <var>calendar</var> be <var>r</var>.[[ca]].</ins></li><li><ins>Set <var>displayNames</var>.[[Calendar]] to <var>calendar</var>.</ins></li><li>Let <var>dataLocale</var> be <var>r</var>.[[dataLocale]].</li><li>Let <var>dataLocaleData</var> be <var>localeData</var>.[[&lt;<var>dataLocale</var>&gt;]].</li><li>Let <var>types</var> be <var>dataLocaleData</var>.[[types]].</li><li><emu-xref href="#assert"><a href="https://tc39.es/ecma262/#assert">Assert</a></emu-xref>: <var>types</var> is a <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.es/ecma262/#sec-list-and-record-specification-type">Record</a></emu-xref> (see <emu-xref href="#sec-Intl.DisplayNames-internal-slots" id="_ref_5"><a href="#sec-Intl.DisplayNames-internal-slots">1.5.3</a></emu-xref>).</li><li>Let <var>typeFields</var> be <var>types</var>.[[&lt;<var>type</var>&gt;]].</li><li><emu-xref href="#assert"><a href="https://tc39.es/ecma262/#assert">Assert</a></emu-xref>: <var>typeFields</var> is a <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.es/ecma262/#sec-list-and-record-specification-type">Record</a></emu-xref> (see <emu-xref href="#sec-Intl.DisplayNames-internal-slots" id="_ref_6"><a href="#sec-Intl.DisplayNames-internal-slots">1.5.3</a></emu-xref>).</li><li><del>Let <var>styleFields</var> be <var>typeFields</var>.[[&lt;<var>style</var>&gt;]].</del></li><li><ins>If <var>type</var> is <code>"weekday"</code>, or <code>"month"</code>, then</ins><ol><li><ins>Let <var>styleFields</var> be <var>typeFields</var>.[[&lt;<var>calendar</var>&gt;]].[[&lt;<var>style</var>&gt;]].</ins></li></ol></li><li><ins>Else,</ins><ol><li><ins>Let <var>styleFields</var> be <var>typeFields</var>.[[&lt;<var>style</var>&gt;]].</ins></li></ol></li><li><emu-xref href="#assert"><a href="https://tc39.es/ecma262/#assert">Assert</a></emu-xref>: <var>styleFields</var> is a <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.es/ecma262/#sec-list-and-record-specification-type">Record</a></emu-xref> (see <emu-xref href="#sec-Intl.DisplayNames-internal-slots" id="_ref_7"><a href="#sec-Intl.DisplayNames-internal-slots">1.5.3</a></emu-xref>).</li><li>Set <var>displayNames</var>.[[Fields]] to <var>styleFields</var>.</li><li>Return <var>displayNames</var>.</li></ol></emu-alg>
+      <emu-alg><ol><li>If NewTarget is <emu-val>undefined</emu-val>, throw a <emu-val>TypeError</emu-val> exception.</li><li>Let <var>displayNames</var> be ?&nbsp;<emu-xref aoid="OrdinaryCreateFromConstructor" id="_ref_5"><a href="https://tc39.es/ecma262/#sec-ordinarycreatefromconstructor">OrdinaryCreateFromConstructor</a></emu-xref>(NewTarget, <code>"%DisplayNamesPrototype%"</code>, « [[InitializedDisplayNames]], [[Locale]], [[Style]], [[Type]], [[Fallback]], [[Fields]] »).</li><li>Let <var>requestedLocales</var> be ?&nbsp;<emu-xref aoid="CanonicalizeLocaleList"><a href="https://tc39.es/ecma402/#sec-canonicalizelocalelist">CanonicalizeLocaleList</a></emu-xref>(<var>locales</var>).</li><li>Let <var>options</var> be ?&nbsp;<emu-xref aoid="ToObject" id="_ref_6"><a href="https://tc39.es/ecma262/#sec-toobject">ToObject</a></emu-xref>(<var>options</var>).</li><li>Let <var>opt</var> be a new <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.es/ecma262/#sec-list-and-record-specification-type">Record</a></emu-xref>.</li><li>Let <var>localeData</var> be %DisplayNames%.[[LocaleData]].</li><li>Let <var>matcher</var> be ?&nbsp;<emu-xref aoid="GetOption"><a href="https://tc39.es/ecma402/#sec-getoption">GetOption</a></emu-xref>(<var>options</var>, <code>"localeMatcher"</code>, <code>"string"</code>, « <code>"lookup"</code>, <code>"best fit"</code> », <code>"best fit"</code>).</li><li>Set <var>opt</var>.[[localeMatcher]] to <var>matcher</var>.</li><li>Let <var>r</var> be <emu-xref aoid="ResolveLocale"><a href="https://tc39.es/ecma402/#sec-resolvelocale">ResolveLocale</a></emu-xref>(%DisplayNames%.[[AvailableLocales]], <var>requestedLocales</var>, <var>opt</var>, %DisplayNames%.[[RelevantExtensionKeys]]).</li><li>Let <var>style</var> be ?&nbsp;<emu-xref aoid="GetOption"><a href="https://tc39.es/ecma402/#sec-getoption">GetOption</a></emu-xref>(<var>options</var>, <code>"style"</code>, <code>"string"</code>, « <code>"narrow"</code>, <code>"short"</code>, <code>"long"</code> », <code>"long"</code>).</li><li>Set <var>displayNames</var>.[[Style]] to <var>style</var>.</li><li>Let <var>type</var> be ?&nbsp;<emu-xref aoid="GetOption"><a href="https://tc39.es/ecma402/#sec-getoption">GetOption</a></emu-xref>(<var>options</var>, <code>"type"</code>, <code>"string"</code>, « <code>"language"</code>, <code>"region"</code>, <code>"script"</code>, <code>"currency"</code> <ins>, <code>"calendar"</code>, <code>"unit"</code></ins>», <emu-val>undefined</emu-val>).</li><li>If <var>type</var> is <emu-val>undefined</emu-val>, throw a <emu-val>TypeError</emu-val> exception.</li><li>Set <var>displayNames</var>.[[Type]] to <var>type</var>.</li><li>Let <var>fallback</var> be ?&nbsp;<emu-xref aoid="GetOption"><a href="https://tc39.es/ecma402/#sec-getoption">GetOption</a></emu-xref>(<var>options</var>, <code>"fallback"</code>, <code>"string"</code>, « <code>"code"</code>, <code>"none"</code> », <code>"code"</code>).</li><li>Set <var>displayNames</var>.[[Fallback]] to <var>fallback</var>.</li><li>Set <var>displayNames</var>.[[Locale]] to the value of <var>r</var>.[[Locale]].</li><li>Let <var>dataLocale</var> be <var>r</var>.[[dataLocale]].</li><li>Let <var>dataLocaleData</var> be <var>localeData</var>.[[&lt;<var>dataLocale</var>&gt;]].</li><li>Let <var>types</var> be <var>dataLocaleData</var>.[[types]].</li><li><emu-xref href="#assert"><a href="https://tc39.es/ecma262/#assert">Assert</a></emu-xref>: <var>types</var> is a <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.es/ecma262/#sec-list-and-record-specification-type">Record</a></emu-xref> (see <emu-xref href="#sec-Intl.DisplayNames-internal-slots" id="_ref_0"><a href="#sec-Intl.DisplayNames-internal-slots">1.3.3</a></emu-xref>).</li><li>Let <var>typeFields</var> be <var>types</var>.[[&lt;<var>type</var>&gt;]].</li><li><emu-xref href="#assert"><a href="https://tc39.es/ecma262/#assert">Assert</a></emu-xref>: <var>typeFields</var> is a <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.es/ecma262/#sec-list-and-record-specification-type">Record</a></emu-xref> (see <emu-xref href="#sec-Intl.DisplayNames-internal-slots" id="_ref_1"><a href="#sec-Intl.DisplayNames-internal-slots">1.3.3</a></emu-xref>).</li><li><del>Let <var>styleFields</var> be <var>typeFields</var>.[[&lt;<var>style</var>&gt;]].</del></li><li><emu-xref href="#assert"><a href="https://tc39.es/ecma262/#assert">Assert</a></emu-xref>: <var>styleFields</var> is a <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.es/ecma262/#sec-list-and-record-specification-type">Record</a></emu-xref> (see <emu-xref href="#sec-Intl.DisplayNames-internal-slots" id="_ref_2"><a href="#sec-Intl.DisplayNames-internal-slots">1.3.3</a></emu-xref>).</li><li>Set <var>displayNames</var>.[[Fields]] to <var>styleFields</var>.</li><li>Return <var>displayNames</var>.</li></ol></emu-alg>
     </emu-clause>
   </emu-clause>
 
   <emu-clause id="sec-properties-of-intl-displaynames-constructor">
-    <h1><span class="secnum">1.5</span> Properties of the Intl.DisplayNames Constructor</h1>
+    <h1><span class="secnum">1.3</span> Properties of the Intl.DisplayNames Constructor</h1>
 
     <p>
       The Intl.DisplayNames <emu-xref href="#constructor"><a href="https://tc39.es/ecma262/#constructor">constructor</a></emu-xref> has the following properties:
     </p>
 
     <emu-clause id="sec-Intl.DisplayNames.prototype">
-      <h1><span class="secnum">1.5.1</span> Intl.DisplayNames.prototype</h1>
+      <h1><span class="secnum">1.3.1</span> Intl.DisplayNames.prototype</h1>
 
       <p>
         The value of <emu-val>Intl.DisplayNames.prototype</emu-val> is <emu-val>%DisplayNamesPrototype%</emu-val>.
@@ -2168,7 +1912,7 @@ li.menu-search-result-term:before {
     </emu-clause>
 
     <emu-clause id="sec-Intl.DisplayNames.supportedLocalesOf">
-      <h1><span class="secnum">1.5.2</span> Intl.DisplayNames.supportedLocalesOf ( <var>locales</var> [ , <var>options</var> ] )</h1>
+      <h1><span class="secnum">1.3.2</span> Intl.DisplayNames.supportedLocalesOf ( <var>locales</var> [ , <var>options</var> ] )</h1>
 
       <p>
         When the <emu-val>supportedLocalesOf</emu-val> method of <emu-val>%DisplayNames%</emu-val> is called, the following steps are taken:
@@ -2178,7 +1922,7 @@ li.menu-search-result-term:before {
     </emu-clause>
 
     <emu-clause id="sec-Intl.DisplayNames-internal-slots">
-      <h1><span class="secnum">1.5.3</span> Internal slots</h1>
+      <h1><span class="secnum">1.3.3</span> Internal slots</h1>
 
       <p>
         The value of the [[AvailableLocales]] internal slot is implementation defined within the constraints described in <emu-xref href="#sec-internal-slots"><a href="https://tc39.es/ecma402/#sec-internal-slots">9.1</a></emu-xref>.
@@ -2193,19 +1937,14 @@ li.menu-search-result-term:before {
       </p>
 
       <ul>
-        <li>[[LocaleData]].[[&lt;<var>locale</var>&gt;]] must have a [[types]] field for all locale values <var>locale</var>. The value of this field must be a <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.es/ecma262/#sec-list-and-record-specification-type">Record</a></emu-xref>, which must have fields with the names of one of the valid display name types: <code>"language"</code>, <code>"region"</code>, <code>"script"</code>, <del>and</del> <code>"currency"</code><ins>, <code>"weekday"</code>, <code>"month"</code>,  <code>"calendar"</code>, <code>"numberingSystem"</code>, <code>"unit"</code>, and <code>"timeZone"</code></ins>.</li>
-        <li>The value of fields <code>"language"</code>, <code>"region"</code>, <code>"script"</code>, <del>and </del><code>"currency"</code><ins>, <code>"calendar"</code>, <code>"numberingSystem"</code>, <code>"unit"</code>, and <code>"timeZone"</code></ins> must be a Records which must have fields with the names of one of the valid display name styles: <code>"narrow"</code>, <code>"short"</code>, and <code>"long"</code>.</li>
-        <li><ins>The value of fields <code>"weekday"</code> and <code>"month"</code> must have a [[&lt;<var>calendar</var>&gt;]] field for all calendar values <var>calendar</var>. The value of each of those fields in turn must be a Records which must have fields with the names of one of the valid display name styles: <code>"narrow"</code>, <code>"short"</code>, and <code>"long"</code>.</ins></li>
+        <li>[[LocaleData]].[[&lt;<var>locale</var>&gt;]] must have a [[types]] field for all locale values <var>locale</var>. The value of this field must be a <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.es/ecma262/#sec-list-and-record-specification-type">Record</a></emu-xref>, which must have fields with the names of one of the valid display name types: <code>"language"</code>, <code>"region"</code>, <code>"script"</code>, <del>and</del> <code>"currency"</code><ins>, <code>"calendar"</code>, and <code>"unit"</code></ins>.</li>
+        <li>The value of fields <code>"language"</code>, <code>"region"</code>, <code>"script"</code>, <del>and </del><code>"currency"</code><ins>, <code>"calendar"</code>, and <code>"unit"</code></ins> must be a Records which must have fields with the names of one of the valid display name styles: <code>"narrow"</code>, <code>"short"</code>, and <code>"long"</code>.</li>
         <li>The display name styles fields under display name type <code>"language"</code> should contain Records, with keys corresponding to language codes according to <code>unicode_language_id</code> production. The value of these fields must be string values.</li>
         <li>The display name styles fields under display name type <code>"region"</code> should contain Records, with keys corresponding to region codes. The value of these fields must be string values.</li>
         <li>The display name styles fields under display name type <code>"script"</code> should contain Records, with keys corresponding to script codes. The value of these fields must be string values.</li>
         <li>The display name styles fields under display name type <code>"currency"</code> should contain Records, with keys corresponding to currency codes. The value of these fields must be string values.</li>
-        <li><ins>The display name styles fields under display name type <code>"weekday"</code> should contain Records, with keys corresponding to a weekday code listed in <emu-xref href="#table-validcodeforweekday" id="_ref_8"><a href="#table-validcodeforweekday">Table 1</a></emu-xref>. The value of these fields must be string values.</ins></li>
-        <li><ins>The display name styles fields under display name type <code>"month"</code> should contain Records, with keys corresponding to a month code listed in <emu-xref href="#table-validcodeformonth" id="_ref_9"><a href="#table-validcodeformonth">Table 2</a></emu-xref>. The value of these fields must be string values.</ins></li>
         <li><ins>The display name styles fields under display name type <code>"calendar"</code> should contain Records, with keys corresponding to a String value with the "type" given in Unicode Technical Standard 35 for the calendar used for formatting. The value of these fields must be string values.</ins></li>
-        <li><ins>The display name styles fields under display name type <code>"numberingSytem"</code> should contain Records, with keys corresponding to a String value with the "type" given in Unicode Technical Standard 35 for the numbering system used for formatting. The value of these fields must be string values.</ins></li>
         <li><ins>The display name styles fields under display name type <code>"unit"</code> should contain Records, with keys corresponding to a well-formed core unit identifier as defined in UTS #35, Part 2, Section 6.. The value of these fields must be string values.</ins></li>
-        <li><ins>The display name styles fields under display name type <code>"timeZone"</code> should contain Records, with keys corresponding to a String value with the IANA time zone name of the time zone used for formatting. The value of these fields must be string values.</ins></li>
       </ul>
 
       <emu-note><span class="note">Note</span><div class="note-contents">
@@ -2215,14 +1954,14 @@ li.menu-search-result-term:before {
   </emu-clause>
 
   <emu-clause id="sec-properties-of-intl-displaynames-prototype-object">
-    <h1><span class="secnum">1.6</span> Properties of the Intl.DisplayNames Prototype Object</h1>
+    <h1><span class="secnum">1.4</span> Properties of the Intl.DisplayNames Prototype Object</h1>
 
     <p>
       The Intl.DisplayNames prototype object, referred to as <emu-val>%DisplayNamesPrototype%</emu-val>, is itself an ordinary object. It is not a Intl.DisplayNames instance, does not have an [[InitializedDisplayNames]] internal slot or any of the other internal slots of Intl.DisplayNames instance objects.
     </p>
 
     <emu-clause id="sec-Intl.DisplayNames.prototype.constructor">
-      <h1><span class="secnum">1.6.1</span> Intl.DisplayNames.prototype.constructor</h1>
+      <h1><span class="secnum">1.4.1</span> Intl.DisplayNames.prototype.constructor</h1>
 
       <p>
         The initial value of <emu-val>Intl.DisplayNames.prototype.constructor</emu-val> is the intrinsic object <emu-val>%DisplayNames%</emu-val>.
@@ -2230,7 +1969,7 @@ li.menu-search-result-term:before {
     </emu-clause>
 
     <emu-clause id="sec-Intl.DisplayNames.prototype-@@tostringtag">
-      <h1><span class="secnum">1.6.2</span> Intl.DisplayNames.prototype[ @@toStringTag ]</h1>
+      <h1><span class="secnum">1.4.2</span> Intl.DisplayNames.prototype[ @@toStringTag ]</h1>
 
       <p>
         The initial value of the @@toStringTag property is the string value <code>"Intl.DisplayNames"</code>.
@@ -2241,25 +1980,25 @@ li.menu-search-result-term:before {
     </emu-clause>
 
     <emu-clause id="sec-Intl.DisplayNames.prototype.of" aoid="Intl.DisplayNames.prototype.of">
-      <h1><span class="secnum">1.6.3</span> Intl.DisplayNames.prototype.of ( <var>code</var> )</h1>
+      <h1><span class="secnum">1.4.3</span> Intl.DisplayNames.prototype.of ( <var>code</var> )</h1>
 
       <p>
         When the <emu-val>Intl.DisplayNames.prototype.of</emu-val> is called with an argument <var>code</var>, the following steps are taken:
       </p>
 
-      <emu-alg><ol><li>Let <var>displayNames</var> be <emu-val>this</emu-val> value.</li><li>If <emu-xref aoid="Type" id="_ref_16"><a href="https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values">Type</a></emu-xref>(<var>displayNames</var>) is not Object, throw a <emu-val>TypeError</emu-val> exception.</li><li>If <var>displayNames</var> does not have an [[InitializedDisplayNames]] internal slot, throw a <emu-val>TypeError</emu-val> exception.</li><li>Let <var>code</var> be ?&nbsp;<emu-xref aoid="ToString" id="_ref_17"><a href="https://tc39.es/ecma262/#sec-tostring">ToString</a></emu-xref>(<var>code</var>).</li><li>Let <var>code</var> be ?&nbsp;<emu-xref aoid="CanonicalCodeForDisplayNames" id="_ref_18"><a href="#sec-canonicalcodefordisplaynames">CanonicalCodeForDisplayNames</a></emu-xref>(<var>displayNames</var>.[[Type]], <var>code</var><ins>, <var>displayNames</var>.[[Calendar]]</ins>).</li><li>Let <var>fields</var> be <var>displayNames</var>.[[Fields]].</li><li>Let <var>name</var> be <var>fields</var>[[&lt;<var>code</var>&gt;]].</li><li>If <var>name</var> is not <emu-val>undefined</emu-val>, return <var>name</var>.</li><li>If <var>displayNames</var>.[[Fallback]] is <code>"code"</code>, return <var>code</var>.</li><li>Return <emu-val>undefined</emu-val>.</li></ol></emu-alg>
+      <emu-alg><ol><li>Let <var>displayNames</var> be <emu-val>this</emu-val> value.</li><li>If <emu-xref aoid="Type" id="_ref_7"><a href="https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values">Type</a></emu-xref>(<var>displayNames</var>) is not Object, throw a <emu-val>TypeError</emu-val> exception.</li><li>If <var>displayNames</var> does not have an [[InitializedDisplayNames]] internal slot, throw a <emu-val>TypeError</emu-val> exception.</li><li>Let <var>code</var> be ?&nbsp;<emu-xref aoid="ToString" id="_ref_8"><a href="https://tc39.es/ecma262/#sec-tostring">ToString</a></emu-xref>(<var>code</var>).</li><li>Let <var>code</var> be ?&nbsp;<emu-xref aoid="CanonicalCodeForDisplayNames" id="_ref_9"><a href="#sec-canonicalcodefordisplaynames">CanonicalCodeForDisplayNames</a></emu-xref>(<var>displayNames</var>.[[Type]], <var>code</var>).</li><li>Let <var>fields</var> be <var>displayNames</var>.[[Fields]].</li><li>Let <var>name</var> be <var>fields</var>[[&lt;<var>code</var>&gt;]].</li><li>If <var>name</var> is not <emu-val>undefined</emu-val>, return <var>name</var>.</li><li>If <var>displayNames</var>.[[Fallback]] is <code>"code"</code>, return <var>code</var>.</li><li>Return <emu-val>undefined</emu-val>.</li></ol></emu-alg>
     </emu-clause>
 
     <emu-clause id="sec-Intl.DisplayNames.prototype.resolvedOptions">
-      <h1><span class="secnum">1.6.4</span> Intl.DisplayNames.prototype.resolvedOptions ( )</h1>
+      <h1><span class="secnum">1.4.4</span> Intl.DisplayNames.prototype.resolvedOptions ( )</h1>
 
       <p>
         This function provides access to the locale and options computed during initialization of the object.
       </p>
 
-      <emu-alg><ol><li>Let <var>displayNames</var> be <emu-val>this</emu-val> value.</li><li>If <emu-xref aoid="Type" id="_ref_19"><a href="https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values">Type</a></emu-xref>(<var>displayNames</var>) is not Object, throw a <emu-val>TypeError</emu-val> exception.</li><li>If <var>displayNames</var> does not have an [[InitializedDisplayNames]] internal slot, throw a <emu-val>TypeError</emu-val> exception.</li><li>Let <var>options</var> be !&nbsp;<emu-xref aoid="ObjectCreate" id="_ref_20"><a href="https://tc39.es/ecma262/#sec-objectcreate">ObjectCreate</a></emu-xref>(<emu-xref href="#sec-properties-of-the-object-prototype-object"><a href="https://tc39.es/ecma262/#sec-properties-of-the-object-prototype-object">%ObjectPrototype%</a></emu-xref>).</li><li>For each row of <emu-xref href="#table-displaynames-resolvedoptions-properties" id="_ref_10"><a href="#table-displaynames-resolvedoptions-properties">Table 6</a></emu-xref>, except the header row, in table order, do<ol><li>Let <var>p</var> be the Property value of the current row.</li><li>Let <var>v</var> be the value of <var>displayNames</var>'s internal slot whose name is the Internal Slot value of the current row.</li><li>If <var>v</var> is not <emu-val>undefined</emu-val>, then<ol><li>Perform !&nbsp;<emu-xref aoid="CreateDataPropertyOrThrow" id="_ref_21"><a href="https://tc39.es/ecma262/#sec-createdatapropertyorthrow">CreateDataPropertyOrThrow</a></emu-xref>(<var>options</var>, <var>p</var>, <var>v</var>).</li></ol></li></ol></li><li>Return <var>options</var>.</li></ol></emu-alg>
+      <emu-alg><ol><li>Let <var>displayNames</var> be <emu-val>this</emu-val> value.</li><li>If <emu-xref aoid="Type" id="_ref_10"><a href="https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values">Type</a></emu-xref>(<var>displayNames</var>) is not Object, throw a <emu-val>TypeError</emu-val> exception.</li><li>If <var>displayNames</var> does not have an [[InitializedDisplayNames]] internal slot, throw a <emu-val>TypeError</emu-val> exception.</li><li>Let <var>options</var> be !&nbsp;<emu-xref aoid="ObjectCreate" id="_ref_11"><a href="https://tc39.es/ecma262/#sec-objectcreate">ObjectCreate</a></emu-xref>(<emu-xref href="#sec-properties-of-the-object-prototype-object"><a href="https://tc39.es/ecma262/#sec-properties-of-the-object-prototype-object">%ObjectPrototype%</a></emu-xref>).</li><li>For each row of <emu-xref href="#table-displaynames-resolvedoptions-properties" id="_ref_3"><a href="#table-displaynames-resolvedoptions-properties">Table 1</a></emu-xref>, except the header row, in table order, do<ol><li>Let <var>p</var> be the Property value of the current row.</li><li>Let <var>v</var> be the value of <var>displayNames</var>'s internal slot whose name is the Internal Slot value of the current row.</li><li>If <var>v</var> is not <emu-val>undefined</emu-val>, then<ol><li>Perform !&nbsp;<emu-xref aoid="CreateDataPropertyOrThrow" id="_ref_12"><a href="https://tc39.es/ecma262/#sec-createdatapropertyorthrow">CreateDataPropertyOrThrow</a></emu-xref>(<var>options</var>, <var>p</var>, <var>v</var>).</li></ol></li></ol></li><li>Return <var>options</var>.</li></ol></emu-alg>
 
-      <emu-table id="table-displaynames-resolvedoptions-properties"><figure><figcaption>Table 6: Resolved Options of DisplayNames Instances</figcaption>
+      <emu-table id="table-displaynames-resolvedoptions-properties"><figure><figcaption>Table 1: Resolved Options of DisplayNames Instances</figcaption>
         
         <table class="real-table">
           <thead>
@@ -2290,7 +2029,7 @@ li.menu-search-result-term:before {
   </emu-clause>
 
   <emu-clause id="sec-properties-of-intl-displaynames-instances">
-    <h1><span class="secnum">1.7</span> Properties of Intl.DisplayNames Instances</h1>
+    <h1><span class="secnum">1.5</span> Properties of Intl.DisplayNames Instances</h1>
 
     <p>
       Intl.DisplayNames instances are ordinary objects that inherit properties from %DisplayNamesPrototype%.
@@ -2306,11 +2045,10 @@ li.menu-search-result-term:before {
 
     <ul>
       <li>[[Locale]] is a String value with the language tag of the locale whose localization is used for formatting.</li>
-      <li><ins>[[Calendar]] is a String value with the <code>"type"</code> given in Unicode Technical Standard 35 for the calendar used for formatting.</ins></li>
       <li>[[Style]] is one of the String values <code>"narrow"</code>, <code>"short"</code>, or <code>"long"</code>, identifying the display names style used.</li>
-      <li>[[Type]] is one of the String values <code>"language"</code>, <code>"region"</code>, <code>"script"</code>, <del>or </del><code>"currency"</code>,<ins> <code>"weekday"</code>, <code>"month"</code>, <code>"calendar"</code>, <code>"numberingSystem"</code>, <code>"unit"</code>, or <code>"timeZone"</code> ,</ins> identifying the type of the display names requested.</li>
+      <li>[[Type]] is one of the String values <code>"language"</code>, <code>"region"</code>, <code>"script"</code>, <del>or </del><code>"currency"</code>,<ins> <code>"calendar"</code>, or <code>"unit"</code>,</ins> identifying the type of the display names requested.</li>
       <li>[[Fallback]] is one of the String values <code>"code"</code>, or <code>"none"</code>, identifying the fallback return when the system does not have the requested display name.</li>
-      <li>[[Fields]] is a <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.es/ecma262/#sec-list-and-record-specification-type">Record</a></emu-xref> (see <emu-xref href="#sec-Intl.DisplayNames-internal-slots" id="_ref_11"><a href="#sec-Intl.DisplayNames-internal-slots">1.5.3</a></emu-xref>) which
+      <li>[[Fields]] is a <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.es/ecma262/#sec-list-and-record-specification-type">Record</a></emu-xref> (see <emu-xref href="#sec-Intl.DisplayNames-internal-slots" id="_ref_4"><a href="#sec-Intl.DisplayNames-internal-slots">1.3.3</a></emu-xref>) which
         must have fields with keys corresponding to codes according to [[Style]] and [[Type]].</li>
     </ul>
   </emu-clause>
