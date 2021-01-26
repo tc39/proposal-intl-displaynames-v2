@@ -1,10 +1,10 @@
 # Proposal: Intl.DisplayNames V2
 
 ## Stage 
-Stage 1
+Stage 2
 
 * Advanced to [Stage 1](https://docs.google.com/presentation/d/11Ch4Y9yYzMJjznX478Y0QbbCGiOAXbOzLjpYnMH9eck/edit#slide=id.g98718c7875_0_0) in TC39 2020-09 meeting.
-* Plan to propose to [advance to Stage 2](https://docs.google.com/presentation/d/1Fsr1BhK11rCNgwEMGtwrMq5arpQv2hlEsA2SRiZSTx4/) in [TC39 2021-01-25~28 meeting](https://github.com/tc39/agendas/blob/master/2021/01.md).
+* Advanced to [Stage 2](https://docs.google.com/presentation/d/1Fsr1BhK11rCNgwEMGtwrMq5arpQv2hlEsA2SRiZSTx4/) in [TC39 2021-01-25~28 meeting](https://github.com/tc39/agendas/blob/master/2021/01.md).
 
 
 
