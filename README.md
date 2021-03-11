@@ -24,6 +24,8 @@ Please also see prior work of the first version of Intl.DisplayNames on [the Int
   * [Calendar Names](https://github.com/tc39/proposal-intl-displaynames/issues/69)
   
 During 2021-01 ECMA402 meeting we decided not to include Weekday, Month, TimeZone, and Numbering System. 
+During 2021-03-11 ECMA402 meeting we decided to add back dateTimeField. 
+
 
 ## Discussed Scopes during Stage 1
 
