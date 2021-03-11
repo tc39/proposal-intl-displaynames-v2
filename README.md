@@ -39,6 +39,18 @@ During 2021-01 ECMA402 meeting we decided not to include Weekday, Month, TimeZon
 * Enhance Features:
   * [Supporing Dialect](https://github.com/tc39/proposal-intl-displaynames/issues/20)
 
+## Discussed Scopes during Stage 2
+  * 2021-03-11: Add back dateTimeField
+
+## Entrance Criteria For Stage 3
+* All Stage 2 Criterias
+* Complete spec text
+* Designated reviewers have signed off on the current spec text
+* All ECMAScript editors have signed off on the current spec text
+
+## Entrance Criteria For Stage 2
+* All Stage 1 Criterias
+* Initial spec text
 
 ## Entrance Criteria For Stage 1
 
