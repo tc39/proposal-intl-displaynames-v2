@@ -66,6 +66,60 @@ d8> dn2.of("kilogram")
 ```
 ```
 
+### Date Time Field Names
+```
+$ out/x64.release/d8 --harmony_intl_displaynames_v2
+d8> dn = new Intl.DisplayNames("zh", {type: "dateTimeField"})
+[object Intl.DisplayNames]
+d8> dn.of("era")
+"纪元"
+d8> dn.of("year")
+"年"
+d8> dn.of("month")
+"月"
+d8> dn.of("quarter")
+"季度"
+d8> dn.of("weekOfYear")
+"周"
+d8> dn.of("weekday")
+"工作日"
+d8> dn.of("dayPeriod")
+"上午/下午"
+d8> dn.of("day")
+"日"
+d8> dn.of("hour")
+"小时"
+d8> dn.of("minute")
+"分钟"
+d8> dn.of("second")
+"秒"
+
+d8> dn = new Intl.DisplayNames("es", {type: "dateTimeField"})
+[object Intl.DisplayNames]
+d8> dn.of("era")
+"era"
+d8> dn.of("year")
+"año"
+d8> dn.of("month")
+"mes"
+d8> dn.of("quarter")
+"trimestre"
+d8> dn.of("weekOfYear")
+"semana"
+d8> dn.of("weekday")
+"día de la semana"
+d8> dn.of("dayPeriod")
+"a. m./p. m."
+d8> dn.of("day")
+"día"
+d8> dn.of("hour")
+"hora"
+d8> dn.of("minute")
+"minuto"
+d8> dn.of("second")
+"segundo"
+```
+
 ### Dialect Handling
 ```
 ~/v8/v8$ out/x64.release/d8 --harmony_intl_displaynames_v2
