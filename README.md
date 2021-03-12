@@ -33,9 +33,40 @@ During 2021-01 ECMA402 meeting we decided not to include Weekday, Month, TimeZon
 During 2021-03-11 ECMA402 meeting we decided to add back dateTimeField. 
 
 ## Examples
+### Unit Names
+```
+~/v8/v8$ out/x64.release/d8 --harmony_intl_displaynames_v2
+V8 version 9.1.0 (candidate)
+d8> dn1 = new Intl.DisplayNames("zh-Hant", {type: "unit"})
+d8> dn1.of("meter")
+"公尺"
+d8> dn1.of("degree")
+"角度"
+d8> dn1.of("kilogram")
+"公斤"
+d8> dn2 = new Intl.DisplayNames("fr", {type: "unit"})
+d8> dn2.of("meter")
+"公尺"
+d8> dn2.of("degree")
+"角度"
+d8> dn2.of("kilogram")
+"公斤"
+d8> dn2 = new Intl.DisplayNames("fr", {type: "unit"})
+[object Intl.DisplayNames]
+d8> dn2.of("meter")
+"mètres"
+d8> dn2.of("degree")
+"degrés"
+d8> dn2.of("kilogram")
+"kilogrammes"
+```
+### Calender Names
+```
+```
+
 ### Dialect Handling
 ```
-ftang@ftang4:~/v8/v8$ out/x64.release/d8 --harmony_intl_displaynames_v2
+~/v8/v8$ out/x64.release/d8 --harmony_intl_displaynames_v2
 V8 version 9.1.0 (candidate)
 d8> dn1 = new Intl.DisplayNames("en", {type: "language"})                  
 [object Intl.DisplayNames]
