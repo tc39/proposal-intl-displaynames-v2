@@ -32,6 +32,70 @@ Please also see prior work of the first version of Intl.DisplayNames on [the Int
 During 2021-01 ECMA402 meeting we decided not to include Weekday, Month, TimeZone, and Numbering System. 
 During 2021-03-11 ECMA402 meeting we decided to add back dateTimeField. 
 
+## Examples
+### Dialect Handling
+```
+ftang@ftang4:~/v8/v8$ out/x64.release/d8 --harmony_intl_displaynames_v2
+V8 version 9.1.0 (candidate)
+d8> dn1 = new Intl.DisplayNames("en", {type: "language"})                  
+[object Intl.DisplayNames]
+d8> dn1.of("en")
+"English"
+d8> dn1.of("en-GB")
+"British English"
+d8> dn1.of("en-US")
+"American English"
+d8> dn1.of("en-AU")
+"Australian English"
+d8> dn1.of("en-CA")
+"Canadian English"
+d8> dn1.of("zh")
+"Chinese"
+d8> dn1.of("zh-Hant")
+"Traditional Chinese"
+d8> dn1.of("zh-Hans")
+"Simplified Chinese"
+
+// Same as above
+d8> dn2 = new Intl.DisplayNames("en", {type: "language", dialectHandling: "dialectName"})
+[object Intl.DisplayNames]
+d8> dn2.of("en")
+"English"
+d8> dn2.of("en-GB")
+"British English"
+d8> dn2.of("en-US")
+"American English"
+d8> dn2.of("en-AU")
+"Australian English"
+d8> dn2.of("en-CA")
+"Canadian English"
+d8> dn2.of("zh")
+"Chinese"
+d8> dn2.of("zh-Hant")
+"Traditional Chinese"
+d8> dn2.of("zh-Hans")
+"Simplified Chinese"
+
+// Now switch to standard name
+d8> dn3 = new Intl.DisplayNames("en", {type: "language", dialectHandling: "standardName"})
+[object Intl.DisplayNames]
+d8> dn3.of("en")
+"English"
+d8> dn3.of("en-GB")
+"English (United Kingdom)"
+d8> dn3.of("en-AU")
+"English (Australia)"
+d8> dn3.of("en-CA")
+"English (Canada)"
+d8> dn3.of("en-US")
+"English (United States)"
+d8> dn3.of("zh")
+"Chinese"
+d8> dn3.of("zh-Hant")
+"Chinese (Traditional)"
+d8> dn3.of("zh-Hans")
+"Chinese (Simplified)"
+```
 
 ## Discussed Scopes during Stage 1
 
