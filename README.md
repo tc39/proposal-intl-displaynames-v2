@@ -224,5 +224,4 @@ d8> dn3.of("zh-Hans")
 
 ## Experimentals
 * [V8 Prototype](https://chromium-review.googlesource.com/c/v8/v8/+/2335890)
-  * Partial implementation of weekdays , month, unit, timeZone, calendar, numberingSystem.
-
+  * Implement new types "calendar", "dateTimeField", and "unit" and add dialectHandling option
