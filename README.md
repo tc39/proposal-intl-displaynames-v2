@@ -67,6 +67,38 @@ d8> dn2.of("kilogram")
 ```
 ### Calender Names
 ```
+d8> dn = new Intl.DisplayNames("en", {type: "calendar"})
+d8> dn.of("roc")
+"Minguo Calendar"
+d8> dn.of("persian")
+"Persian Calendar"
+d8> dn.of("gregory")
+"Gregorian Calendar"
+d8> dn.of("ethiopic-amete-alem")
+"Ethiopic Amete Alem Calendar"
+d8> dn.of("japanese")
+"Japanese Calendar"
+d8> dn.of("dangi")
+"Dangi Calendar"
+d8> dn.of("chinese")
+"Chinese Calendar"
+
+
+d8>  dn = new Intl.DisplayNames("zh", {type: "calendar"})
+d8> dn.of("roc")
+"民国纪年"
+d8> dn.of("persian")
+"波斯历"
+d8> dn.of("gregory")
+"公历"
+d8> dn.of("ethiopic-amete-alem")
+"埃塞俄比亚阿米特阿莱姆日历"
+d8> dn.of("japanese")
+"和历"
+d8> dn.of("dangi")
+"檀纪历"
+8> dn.of("chinese")
+"农历"
 ```
 
 ### Date Time Field Names
