@@ -49,13 +49,8 @@ d8> dn1.of("degree")
 "角度"
 d8> dn1.of("kilogram")
 "公斤"
-d8> dn2 = new Intl.DisplayNames("fr", {type: "unit"})
-d8> dn2.of("meter")
-"公尺"
-d8> dn2.of("degree")
-"角度"
-d8> dn2.of("kilogram")
-"公斤"
+
+
 d8> dn2 = new Intl.DisplayNames("fr", {type: "unit"})
 [object Intl.DisplayNames]
 d8> dn2.of("meter")
