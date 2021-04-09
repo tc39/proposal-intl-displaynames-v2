@@ -69,7 +69,7 @@ d8> dn.of("persian")
 "Persian Calendar"
 d8> dn.of("gregory")
 "Gregorian Calendar"
-d8> dn.of("ethiopic-amete-alem")
+d8> dn.of("ethioaa")
 "Ethiopic Amete Alem Calendar"
 d8> dn.of("japanese")
 "Japanese Calendar"
@@ -86,7 +86,7 @@ d8> dn.of("persian")
 "波斯历"
 d8> dn.of("gregory")
 "公历"
-d8> dn.of("ethiopic-amete-alem")
+d8> dn.of("ethioaa")
 "埃塞俄比亚阿米特阿莱姆日历"
 d8> dn.of("japanese")
 "和历"
