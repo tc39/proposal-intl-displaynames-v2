@@ -360,7 +360,7 @@
       <li>[[Style]] is one of the String values `"narrow"`, `"short"`, or `"long"`, identifying the display names style used.</li>
       <li>[[Type]] is one of the String values `"language"`, `"region"`, `"script"`, <del>or </del>`"currency"`,<ins> `"calendar"`, `"dateTimeField"`, or `"unit"`,</ins> identifying the type of the display names requested.</li>
       <li>[[Fallback]] is one of the String values `"code"`, or `"none"`, identifying the fallback return when the system does not have the requested display name.</li>
-      <li><ins>[[DialectHandling]] is one of the String values `"dialectName"`, or `"standardName"`, identifying the display names dialect handling.</ins></li>
+      <li><ins>[[DialectHandling]] is one of the String values `"dialectName"`, or `"standardName"`, identifying the display names dialect handling while and only while the [[Type]] is `"language"`.</ins></li>
       <li>[[Fields]] is a Record (see <emu-xref href="#sec-Intl.DisplayNames-internal-slots"></emu-xref>) which
         must have fields with keys corresponding to codes according to [[Style]] <del>and</del><ins>,</ins> [[Type]]<ins>, and [[DialectHandling]]</ins>.</li>
     </ul>
