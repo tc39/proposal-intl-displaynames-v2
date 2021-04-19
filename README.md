@@ -27,14 +27,15 @@ In Intl.DisplayNames API, we already cover language, region, script, and currenc
 Please also see prior work of the first version of Intl.DisplayNames on [the Intl.DisplayNames repo](https://github.com/tc39/proposal-intl-displaynames/)
 
 ## Scoped Enhancements
-  * [Unit Names](https://github.com/tc39/proposal-intl-displaynames/issues/34)
-  * [Calendar Names](https://github.com/tc39/proposal-intl-displaynames/issues/69)
-  * Date Time Field
-  * Dialect Handling
+* [Unit Names](https://github.com/tc39/proposal-intl-displaynames/issues/34)
+* [Calendar Names](https://github.com/tc39/proposal-intl-displaynames/issues/69)
+* Date Time Field
+* Dialect Handling
   
-During 2021-01 ECMA402 meeting we decided not to include Weekday, Month, TimeZone, and Numbering System. 
-During 2021-03-11 ECMA402 meeting we decided to add back dateTimeField. 
-During 2021-04-08 ECMA402 meeting we agree the name of the dialectHandling and proceed to TC39 for Stage 3. Shane and Ujjwal agreed to be Stage 3 reviewers.
+Changes of scope
+* During 2021-01 ECMA402 meeting we decided not to include Weekday, Month, TimeZone, and Numbering System. 
+* During 2021-03-11 ECMA402 meeting we decided to add back dateTimeField. 
+* During 2021-04-08 ECMA402 meeting we agree the name of the dialectHandling and proceed to TC39 for Stage 3. Shane and Ujjwal agreed to be Stage 3 reviewers.
 
 
 ## Examples
