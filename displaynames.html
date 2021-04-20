@@ -154,7 +154,7 @@
         1. Let _typeFields_ be _types_.[[&lt;_type_&gt;]].
         1. Assert: _typeFields_ is a Record (see <emu-xref href="#sec-Intl.DisplayNames-internal-slots"></emu-xref>).
         1. <ins>If _type_ is `"language"`, then</ins>
-          1. <ins>Let _dialectHandling_ be ? GetOption(_options_, `"dialectHandling"`, `"string"`, &laquo; `"dialectName"`, `"standardName"` &raquo;, `"dialectName"`).</ins>
+          1. <ins>Let _dialectHandling_ be ? GetOption(_options_, `"dialectHandling"`, `"string"`, &laquo; `"dialect"`, `"standard"` &raquo;, `"dialect"`).</ins>
           1. <ins>Set _displayNames_.[[DialectHandling]] to _dialectHandling_.</ins>
           1. <ins>Let _typeFields_ be _typeFields_.[[&lt;_dialectHandling_&gt;]].</ins>
           1. <ins>Assert: _typeFields_ is a Record (see <emu-xref href="#sec-Intl.DisplayNames-internal-slots"></emu-xref>).</ins>
@@ -215,7 +215,7 @@
 
       <ul>
         <li>[[LocaleData]].[[&lt;_locale_&gt;]] must have a [[types]] field for all locale values _locale_. The value of this field must be a Record, which must have fields with the names of one of the valid display name types: `"language"`, `"region"`, `"script"`, <del>and</del> `"currency"`<ins>, `"calendar"`, `"dateTimeField"`, and `"unit"`</ins>.</li>
-        <li><ins>The value of the field `"language"` must be a Record which must have fields with the names of one of the valid display name dialect handlings: `"dialectName"`, and `"standardName"`.</ins></li>
+        <li><ins>The value of the field `"language"` must be a Record which must have fields with the names of one of the valid display name dialect handlings: `"dialect"`, and `"standard"`.</ins></li>
         <li><ins>The display name dialect handling fields under display name type `"language"` should contain Records which must have fields with the names of one of the valid display name styles: `"narrow"`, `"short"`, and `"long"`.</ins></li>
         <li>The value of fields <del>`"language"`, </del>`"region"`, `"script"`, <del>and </del>`"currency"`<ins>, `"calendar"`, `"dateTimeField"`, and `"unit"`</ins> must be a Record which must have fields with the names of one of the valid display name styles: `"narrow"`, `"short"`, and `"long"`.</li>
         <li>The display name styles fields under display name type `"language"` should contain Records, with keys corresponding to language codes according to `unicode_language_id` production. The value of these fields must be string values.</li>
@@ -354,7 +354,7 @@
       <li>[[Style]] is one of the String values `"narrow"`, `"short"`, or `"long"`, identifying the display names style used.</li>
       <li>[[Type]] is one of the String values `"language"`, `"region"`, `"script"`, <del>or </del>`"currency"`,<ins> `"calendar"`, `"dateTimeField"`, or `"unit"`,</ins> identifying the type of the display names requested.</li>
       <li>[[Fallback]] is one of the String values `"code"`, or `"none"`, identifying the fallback return when the system does not have the requested display name.</li>
-      <li><ins>[[DialectHandling]] is one of the String values `"dialectName"`, or `"standardName"`, identifying the display names dialect handling while and only while the [[Type]] is `"language"`.</ins></li>
+      <li><ins>[[DialectHandling]] is one of the String values `"dialect"`, or `"standard"`, identifying the display names dialect handling while and only while the [[Type]] is `"language"`.</ins></li>
       <li>[[Fields]] is a Record (see <emu-xref href="#sec-Intl.DisplayNames-internal-slots"></emu-xref>) which
         must have fields with keys corresponding to codes according to [[Style]] <del>and</del><ins>,</ins> [[Type]]<ins>, and [[DialectHandling]]</ins>.</li>
     </ul>
