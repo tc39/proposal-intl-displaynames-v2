@@ -5,7 +5,8 @@ Stage 2
 
 * Advanced to [Stage 1](https://docs.google.com/presentation/d/11Ch4Y9yYzMJjznX478Y0QbbCGiOAXbOzLjpYnMH9eck/edit#slide=id.g98718c7875_0_0) in TC39 2020-09 meeting.
 * Advanced to [Stage 2](https://docs.google.com/presentation/d/1Fsr1BhK11rCNgwEMGtwrMq5arpQv2hlEsA2SRiZSTx4/) in [TC39 2021-01-25~28 meeting](https://github.com/tc39/agendas/blob/master/2021/01.md).
-* Plan to propose to [Stage 3](https://docs.google.com/presentation/d/1_BR2bq6gi_i9QjDDluv683cuO2AXNwZl-3hXC4gLl3M/edit) in [TC39 2021 April meeting](https://github.com/tc39/agendas/blob/master/2021/04.md).
+* Proposed for [Stage 3](https://docs.google.com/presentation/d/1_BR2bq6gi_i9QjDDluv683cuO2AXNwZl-3hXC4gLl3M/edit) in [TC39 2021 April meeting](https://github.com/tc39/agendas/blob/master/2021/04.md) but not reaching consensus due to [issues related to dialectHandling](https://github.com/tc39/intl-displaynames-v2/issues/29) and [user requests of 'unit' support](https://github.com/tc39/intl-displaynames-v2/issues/2). 
+* Plan to propose to Stage 3 in TC39 2021 May meeting
 
 
 
