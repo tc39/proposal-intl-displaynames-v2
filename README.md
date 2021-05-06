@@ -28,7 +28,7 @@ In Intl.DisplayNames API, we already cover language, region, script, and currenc
 Please also see prior work of the first version of Intl.DisplayNames on [the Intl.DisplayNames repo](https://github.com/tc39/proposal-intl-displaynames/)
 
 ## Scoped Enhancements
-* [Unit Names](https://github.com/tc39/proposal-intl-displaynames/issues/34)
+* Date Time Field
 * [Calendar Names](https://github.com/tc39/proposal-intl-displaynames/issues/69)
 * Dialect Handling
   
