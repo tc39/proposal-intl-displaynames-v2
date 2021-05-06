@@ -30,7 +30,7 @@ Please also see prior work of the first version of Intl.DisplayNames on [the Int
 ## Scoped Enhancements
 * Date Time Field
 * [Calendar Names](https://github.com/tc39/proposal-intl-displaynames/issues/69)
-* Dialect Handling
+* Language Display : standard vs dialect
   
 Changes of scope
 * During 2021-01 ECMA402 meeting, we decided not to include Weekday, Month, TimeZone, and Numbering System. 
