@@ -30,38 +30,16 @@ Please also see prior work of the first version of Intl.DisplayNames on [the Int
 ## Scoped Enhancements
 * [Unit Names](https://github.com/tc39/proposal-intl-displaynames/issues/34)
 * [Calendar Names](https://github.com/tc39/proposal-intl-displaynames/issues/69)
-* Date Time Field
 * Dialect Handling
   
 Changes of scope
-* During 2021-01 ECMA402 meeting we decided not to include Weekday, Month, TimeZone, and Numbering System. 
-* During 2021-03-11 ECMA402 meeting we decided to add back dateTimeField. 
-* During 2021-04-08 ECMA402 meeting we agree the name of the dialectHandling and proceed to TC39 for Stage 3. Shane and Ujjwal agreed to be Stage 3 reviewers.
-
+* During 2021-01 ECMA402 meeting, we decided not to include Weekday, Month, TimeZone, and Numbering System. 
+* During 2021-03-11 ECMA402 meeting, we decided to add back dateTimeField. 
+* During 2021-04-08 ECMA402 meeting, we agree the name of the dialectHandling and proceed to TC39 for Stage 3. Shane and Ujjwal agreed to be Stage 3 reviewers.
+* During 2021-05-06 ECMA402 meeting, we agree to drop the "unit" support and rename dialectHandling to languageDisplay.
 
 ## Examples
-### Unit Names
-```
-~/v8/v8$ out/x64.release/d8 --harmony_intl_displaynames_v2
-V8 version 9.1.0 (candidate)
-d8> dn1 = new Intl.DisplayNames("zh-Hant", {type: "unit"})
-d8> dn1.of("meter")
-"公尺"
-d8> dn1.of("degree")
-"角度"
-d8> dn1.of("kilogram")
-"公斤"
 
-
-d8> dn2 = new Intl.DisplayNames("fr", {type: "unit"})
-[object Intl.DisplayNames]
-d8> dn2.of("meter")
-"mètres"
-d8> dn2.of("degree")
-"degrés"
-d8> dn2.of("kilogram")
-"kilogrammes"
-```
 ### Calender Names
 ```
 d8> dn = new Intl.DisplayNames("en", {type: "calendar"})
@@ -152,7 +130,7 @@ d8> dn.of("second")
 "segundo"
 ```
 
-### Dialect Handling
+### Language Display
 ```
 ~/v8/v8$ out/x64.release/d8 --harmony_intl_displaynames_v2
 V8 version 9.1.0 (candidate)
@@ -176,7 +154,7 @@ d8> dn1.of("zh-Hans")
 "Simplified Chinese"
 
 // Same as above
-d8> dn2 = new Intl.DisplayNames("en", {type: "language", dialectHandling: "dialectName"})
+d8> dn2 = new Intl.DisplayNames("en", {type: "language", languageDisplay: "dialect"})
 [object Intl.DisplayNames]
 d8> dn2.of("en")
 "English"
@@ -196,7 +174,7 @@ d8> dn2.of("zh-Hans")
 "Simplified Chinese"
 
 // Now switch to standard name
-d8> dn3 = new Intl.DisplayNames("en", {type: "language", dialectHandling: "standardName"})
+d8> dn3 = new Intl.DisplayNames("en", {type: "language", languageDisplay: "standard"})
 [object Intl.DisplayNames]
 d8> dn3.of("en")
 "English"
@@ -232,6 +210,7 @@ d8> dn3.of("zh-Hans")
 
 ## Discussed Scopes during Stage 2
   * 2021-03-11: Add back dateTimeField
+  * 2021-05-06: Remove unit
 
 ## Entrance Criteria For Stage 3
 * All Stage 2 Criterias
