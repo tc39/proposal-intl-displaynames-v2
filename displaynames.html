@@ -43,11 +43,11 @@
       <h1><ins>IsValidDateTimeFieldCode ( _field_ )</ins></h1>
       <p>
       <ins>
-        The IsValidDateTimeFieldCode abstract operation is called with arguments _field_. It verifies that the _field_ argument represents a valid date time field code. The following steps are taken:
+        The IsValidDateTimeFieldCode abstract operation is called with argument _field_. It verifies that the _field_ argument represents a valid date time field code. The following steps are taken:
       </ins>
       </p>
       <emu-alg>
-        1. <ins>If _field_ is listed in <emu-xref href="#table-validcodefordatetimefield"></emu-xref>, return *true*.</ins>
+        1. <ins>If _field_ is listed in the Code column of <emu-xref href="#table-validcodefordatetimefield"></emu-xref>, return *true*.</ins>
         1. <ins>Return *false*.</ins>
       </emu-alg>
 
@@ -62,7 +62,7 @@
           </thead>
           <tr>
             <td><ins>`"era"`</ins></td>
-            <td><ins>The field indicating the era, e.g., AD or BC in the Gregorian (Julian) calendar.</ins></td>
+            <td><ins>The field indicating the era, e.g. AD or BC in the Gregorian (Julian) calendar.</ins></td>
           </tr>
           <tr>
             <td><ins>`"year"`</ins></td>
@@ -70,7 +70,7 @@
           </tr>
           <tr>
             <td><ins>`"quarter"`</ins></td>
-            <td><ins>The field indicating the quarter, e.g., Q2, 2nd quarter, etc.</ins></td>
+            <td><ins>The field indicating the quarter, e.g. Q2, 2nd quarter, etc.</ins></td>
           </tr>
           <tr>
             <td><ins>`"month"`</ins></td>
@@ -94,19 +94,19 @@
           </tr>
           <tr>
             <td><ins>`"hour"`</ins></td>
-            <td><ins>The field indicating the hour in day.</ins></td>
+            <td><ins>The field indicating the hour.</ins></td>
           </tr>
           <tr>
             <td><ins>`"minute"`</ins></td>
-            <td><ins>The field indicating the minute in hour.</ins></td>
+            <td><ins>The field indicating the minute.</ins></td>
           </tr>
           <tr>
             <td><ins>`"second"`</ins></td>
-            <td><ins>The field indicating the second in minute.</ins></td>
+            <td><ins>The field indicating the second.</ins></td>
           </tr>
           <tr>
             <td><ins>`"timeZoneName"`</ins></td>
-            <td><ins>The field indicating the timezone name, e.g. PDT, Pacific Daylight Time, etc.</ins></td>
+            <td><ins>The field indicating the time zone name, e.g. PDT, Pacific Daylight Time, etc.</ins></td>
           </tr>
         </table>
       </emu-table>
@@ -150,8 +150,8 @@
         1. Assert: _types_ is a Record (see <emu-xref href="#sec-Intl.DisplayNames-internal-slots"></emu-xref>).
         1. Let _typeFields_ be _types_.[[&lt;_type_&gt;]].
         1. Assert: _typeFields_ is a Record (see <emu-xref href="#sec-Intl.DisplayNames-internal-slots"></emu-xref>).
+        1. <ins>Let _languageDisplay_ be ? GetOption(_options_, `"languageDisplay"`, `"string"`, &laquo; `"dialect"`, `"standard"` &raquo;, `"dialect"`).</ins>
         1. <ins>If _type_ is `"language"`, then</ins>
-          1. <ins>Let _languageDisplay_ be ? GetOption(_options_, `"languageDisplay"`, `"string"`, &laquo; `"dialect"`, `"standard"` &raquo;, `"dialect"`).</ins>
           1. <ins>Set _displayNames_.[[LanguageDisplay]] to _languageDisplay_.</ins>
           1. <ins>Let _typeFields_ be _typeFields_.[[&lt;_languageDisplay_&gt;]].</ins>
           1. <ins>Assert: _typeFields_ is a Record (see <emu-xref href="#sec-Intl.DisplayNames-internal-slots"></emu-xref>).</ins>
@@ -212,14 +212,14 @@
 
       <ul>
         <li>[[LocaleData]].[[&lt;_locale_&gt;]] must have a [[types]] field for all locale values _locale_. The value of this field must be a Record, which must have fields with the names of one of the valid display name types: `"language"`, `"region"`, `"script"`, <del>and</del> `"currency"`<ins>, `"calendar"`, and `"dateTimeField"`</ins>.</li>
-        <li><ins>The value of the field `"language"` must be a Record which must have fields with the names of one of the valid display name language displays: `"dialect"`, and `"standard"`.</ins></li>
-        <li><ins>The display name language display fields under display name type `"language"` should contain Records which must have fields with the names of one of the valid display name styles: `"narrow"`, `"short"`, and `"long"`.</ins></li>
+        <li><ins>The value of the field `"language"` must be a Record which must have fields with the names of one of the valid language displays: `"dialect"` and `"standard"`.</ins></li>
+        <li><ins>The language display fields under display name type `"language"` should contain Records which must have fields with the names of one of the valid display name styles: `"narrow"`, `"short"`, and `"long"`.</ins></li>
         <li>The value of fields <del>`"language"`, </del>`"region"`, `"script"`, <del>and </del>`"currency"`<ins>, `"calendar"`, and `"dateTimeField"`</ins> must be a Record which must have fields with the names of one of the valid display name styles: `"narrow"`, `"short"`, and `"long"`.</li>
         <li>The display name styles fields under display name type `"language"` should contain Records, with keys corresponding to language codes according to `unicode_language_id` production. The value of these fields must be string values.</li>
         <li>The display name styles fields under display name type `"region"` should contain Records, with keys corresponding to region codes. The value of these fields must be string values.</li>
         <li>The display name styles fields under display name type `"script"` should contain Records, with keys corresponding to script codes. The value of these fields must be string values.</li>
         <li>The display name styles fields under display name type `"currency"` should contain Records, with keys corresponding to currency codes. The value of these fields must be string values.</li>
-        <li><ins>The display name styles fields under display name type `"calendar"` should contain Records, with keys corresponding to a String value with the "type" given in Unicode Technical Standard 35 for the calendar used for formatting. The value of these fields must be string values.</li>
+        <li><ins>The display name styles fields under display name type `"calendar"` should contain Records, with keys corresponding to a String value with the `type` given in Unicode Technical Standard 35 for the calendar used for formatting. The value of these fields must be string values.</li>
         <li><ins>The display name styles fields under display name type `"dateTimeField"` should contain Records, with keys corresponding to codes listed in <emu-xref href="#table-validcodefordatetimefield"></emu-xref>. The value of these fields must be string values.</ins></li>
       </ul>
 
@@ -350,7 +350,7 @@
       <li>[[Style]] is one of the String values `"narrow"`, `"short"`, or `"long"`, identifying the display names style used.</li>
       <li>[[Type]] is one of the String values `"language"`, `"region"`, `"script"`, <del>or </del>`"currency"`,<ins> `"calendar"`, or `"dateTimeField"`,</ins> identifying the type of the display names requested.</li>
       <li>[[Fallback]] is one of the String values `"code"`, or `"none"`, identifying the fallback return when the system does not have the requested display name.</li>
-      <li><ins>[[LanguageDisplay]] is one of the String values `"dialect"`, or `"standard"`, identifying the display names language display while and only while the [[Type]] is `"language"`.</ins></li>
+      <li><ins>[[LanguageDisplay]] is one of the String values `"dialect"` or `"standard"`, identifying the language display kind. It is only used when [[Type]] has the value `"language"`.</ins></li>
       <li>[[Fields]] is a Record (see <emu-xref href="#sec-Intl.DisplayNames-internal-slots"></emu-xref>) which
         must have fields with keys corresponding to codes according to [[Style]] <del>and</del><ins>,</ins> [[Type]]<ins>, and [[LanguageDisplay]]</ins>.</li>
     </ul>
