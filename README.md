@@ -233,6 +233,6 @@ d8> dn3.of("zh-Hans")
 * A publicly available repository for the proposal that captures the above requirements: **DONE https://github.com/tc39/intl-displaynames-v2**
 
 ## Experimentals
-* [V8 Prototype](https://chromium-review.googlesource.com/c/v8/v8/+/2335890)
+* [V8 Prototype](https://chromium-review.googlesource.com/c/v8/v8/+/2924523)
   * Implement new types "calendar", "dateTimeField", and "unit" and add dialectHandling option
 * [Mozilla Tracking Bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1693575)
