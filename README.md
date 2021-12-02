@@ -8,7 +8,7 @@ Stage 3
 * Proposed for [Stage 3](https://docs.google.com/presentation/d/1_BR2bq6gi_i9QjDDluv683cuO2AXNwZl-3hXC4gLl3M/edit) in [TC39 2021 April meeting](https://github.com/tc39/agendas/blob/master/2021/04.md) but not reaching consensus due to [issues related to dialectHandling](https://github.com/tc39/intl-displaynames-v2/issues/29) and [user requests of 'unit' support](https://github.com/tc39/intl-displaynames-v2/issues/2). 
 * Advanced to [Stage 3](https://docs.google.com/presentation/d/1hxhwHyJLYT32NYrKLTCDLhZHN6OVZEamJppLLlSmyi0) in [TC39 2021-05-25~26 meeting](https://github.com/tc39/agendas/blob/master/2021/05.md).
 * Update during [Stage 3](https://docs.google.com/presentation/d/1EUJ8fIBcCN784S_Da5FT8Fxgo1_lVM8InbSUjhuvpkU) in [TC39 2021-07-13~16 meeting](https://github.com/tc39/agendas/blob/master/2021/07.md)
-* [Slide for Stage 4 Advacement for TC39 2021-Dec meeting(https://docs.google.com/presentation/d/1bvfdKBVNRUH7J18WGnxR02CKZJ_z3QThp3fLWdMqmzE/)
+* [Slide for Stage 4 Advacement for TC39 2021-Dec meeting](https://docs.google.com/presentation/d/1bvfdKBVNRUH7J18WGnxR02CKZJ_z3QThp3fLWdMqmzE/)
 
 
 ## Champion
